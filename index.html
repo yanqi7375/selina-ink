@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Selina Huang — Founder &amp; CEO, Aigeo</title>
-<meta name="description" content="Selina Huang — serial founder; Founder &amp; CEO of Aigeo, a full-service marketing company: GEO, SEO, social media, PR and Silicon Valley events. 20+ countries, Brown × Harvard. San Francisco Bay Area.">
+<meta name="description" content="Selina Huang — serial founder; Founder &amp; CEO of Aigeo, an AI-native MarTech company: its own software plus GEO, SEO, social, PR and Silicon Valley events. $1M ARR, trusted by Fortune 500 companies. 20+ countries, Brown × Harvard. San Francisco Bay Area.">
 <meta property="og:title" content="Selina Huang — Founder &amp; CEO, Aigeo">
-<meta property="og:description" content="Serial founder. Aigeo — full-service marketing, from AI answers to the room: GEO, SEO, social, PR and Silicon Valley events.">
+<meta property="og:description" content="Serial founder. Aigeo — an AI-native MarTech company: software plus GEO, SEO, PR and Silicon Valley events. $1M ARR, trusted by Fortune 500 companies.">
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="Selina Huang">
 <meta name="twitter:card" content="summary">
@@ -179,14 +179,6 @@ html.js .stamp[data-stamp].hit{animation:stampIn .38s var(--ease-stamp) forwards
   padding:var(--s5) var(--gutter) var(--s4);
   overflow:clip;
 }
-.hero-ghost{
-  position:absolute;top:50%;left:55%;transform:translate(-50%,-54%);
-  font-family:var(--font-d);font-weight:900;font-synthesis:none;
-  font-size:42vw;line-height:1;color:transparent;
-  -webkit-text-stroke:2px rgba(13,13,12,.14);
-  opacity:.45;pointer-events:none;user-select:none;z-index:0;
-}
-.hero-kick{margin-bottom:var(--s3);position:relative;z-index:1}
 .hero-name{position:relative;z-index:1}
 .hline{overflow:hidden;display:block}
 .hline > span{
@@ -209,6 +201,10 @@ html.js .loaded .hline > span{transform:translateY(0)}
 .uline svg{
   position:absolute;left:-2%;right:-2%;width:104%;height:.5em;bottom:-.32em;overflow:visible;
 }
+a.uline{text-decoration:none;font-weight:700;transition:color .15s var(--ease-out)}
+a.uline:hover{color:var(--verm)}
+.coord{font-size:.6875rem;font-weight:700;letter-spacing:.14em;color:var(--gray-text)}
+.ext{display:inline-block;width:.75em;height:.75em;margin-left:.3em;vertical-align:-.05em;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .uline path{
   fill:none;stroke:var(--verm);stroke-width:3;stroke-linecap:round;vector-effect:non-scaling-stroke;
   stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .8s var(--ease-out) 1s;
@@ -220,12 +216,7 @@ html:not(.js) .uline path{stroke-dashoffset:0}
   gap:var(--s3);position:relative;z-index:1;
 }
 .issue{font-size:.6875rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gray-text)}
-.issue .issue .coord{margin-top:.6em;font-size:.6875rem;letter-spacing:.06em;color:var(--verm-text);font-weight:400}
-.vlabel{
-  position:absolute;right:calc(var(--gutter) * .35);top:50%;transform:translateY(-50%);
-  writing-mode:vertical-rl;font-family:var(--font-d);font-weight:900;font-synthesis:none;
-  font-size:.8125rem;letter-spacing:.4em;text-transform:uppercase;color:var(--verm);z-index:1;
-}
+.hero-foot .coord{margin-top:.6em;font-size:.6875rem;letter-spacing:.06em;color:var(--verm-text);font-weight:400}
 .scue{flex:none}
 .scue svg{width:92px;height:92px;display:block}
 .scue text{
@@ -236,22 +227,12 @@ html:not(.js) .uline path{stroke-dashoffset:0}
 .scue circle{fill:var(--verm)}
 
 /* ============================================================
-   generic section chrome: ghost numerals + reveals
+   generic section chrome: titles, dividers, reveals
    ============================================================ */
-.gwrap{position:absolute;inset:0;pointer-events:none;z-index:0}
-.gnum{
-  position:sticky;top:14vh;display:grid;justify-content:end;
-  padding-right:clamp(.5rem,2vw,2rem);user-select:none;
+.sec-title{font-size:clamp(2rem,5vw,3.75rem);line-height:1;margin-top:var(--s2)}
+#journey::before,#life::before{
+  content:"";position:absolute;top:0;left:var(--gutter);right:var(--gutter);height:1px;background:var(--rule);
 }
-.gnum span{
-  grid-area:1/1;font-family:var(--font-d);font-weight:900;font-synthesis:none;
-  font-size:clamp(12rem,30vw,24rem);line-height:.8;letter-spacing:-0.02em;
-}
-.gnum .o{color:transparent;-webkit-text-stroke:2px var(--verm);opacity:.5}
-.gnum .f{color:var(--verm);opacity:.55;clip-path:inset(calc((1 - var(--p,0)) * 100%) 0 0 0)}
-.on-ink .gnum .o{opacity:.7}
-.on-verm .gnum .o{-webkit-text-stroke:2px var(--ink);opacity:.35}
-.on-verm .gnum .f{color:var(--ink);opacity:.3}
 
 html.js [data-io] .rv{opacity:0;transform:translateY(24px)}
 html.js [data-io].in .rv{opacity:1;transform:none;transition:opacity .6s var(--ease-out),transform .6s var(--ease-out)}
@@ -267,7 +248,38 @@ html.js [data-io].in .rv.d3{transition-delay:.24s}
    ============================================================ */
 .s-now{background:var(--ink);color:var(--paper)}
 .now-head{font-size:clamp(3rem,9vw,8rem);line-height:.9;margin-top:var(--s3)}
+.now-head a{text-decoration:none;transition:color .15s var(--ease-out)}
+.now-head a:hover{color:var(--verm)}
 .now-head .red{color:var(--verm)}
+.now-cta{
+  display:inline-flex;align-items:center;gap:.2em;margin-top:var(--s3);
+  padding:.8em 1.3em;border:1.5px solid var(--verm);color:var(--paper);text-decoration:none;
+  font-weight:700;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;
+  transition:background .15s var(--ease-out),color .15s var(--ease-out);
+}
+.now-cta:hover{background:var(--verm);color:var(--ink)}
+
+/* stat strips: Aigeo numbers + personal ledger */
+.stats{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:var(--s5);
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+}
+.stat{padding:clamp(1.25rem,2.5vw,2rem) clamp(1rem,2.5vw,2rem)}
+.stat:first-child{padding-left:0}
+.stat + .stat{border-left:1px solid var(--rule)}
+.stat-k{font-weight:700;font-size:.6875rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gray-text)}
+.stat-v{
+  margin-top:.7rem;font-family:var(--font-d);font-weight:900;font-synthesis:none;
+  font-size:clamp(1.9rem,3.4vw,3.25rem);line-height:1;letter-spacing:-0.01em;white-space:nowrap;
+}
+.stat-n{margin-top:.6rem;font-size:.9375rem;color:var(--gray-text)}
+.stat-stamp{margin-left:.9rem;vertical-align:middle}
+.stats-ink,.stats-ink .stat + .stat{border-color:rgba(244,241,234,.22)}
+.stats-ink .stat-k{color:rgba(244,241,234,.65)}
+html.js .stat[data-io]{opacity:0;transform:translateY(16px)}
+html.js .stat[data-io].in{opacity:1;transform:none;transition:opacity .6s var(--ease-out),transform .6s var(--ease-out)}
+.stat:nth-child(2){transition-delay:.08s}
+.stat:nth-child(3){transition-delay:.16s}
 .now-sub{
   font-family:var(--font-d);font-weight:900;font-synthesis:none;text-transform:uppercase;
   font-size:clamp(1.05rem,2.6vw,1.75rem);line-height:1.15;margin-top:var(--s3);color:var(--paper);
@@ -293,7 +305,7 @@ html.js [data-io].in .rv.d3{transition-delay:.24s}
 }
 .svc-wrap.in .svc-rail i,html:not(.js) .svc-rail i{transform:scaleX(1)}
 .svc{
-  list-style:none;display:grid;grid-template-columns:repeat(5,1fr);
+  list-style:none;display:grid;grid-template-columns:repeat(3,1fr);
   gap:1px;background:rgba(244,241,234,.22);border:1px solid rgba(244,241,234,.22);
 }
 .svc-i{
@@ -311,162 +323,66 @@ html.js [data-io].in .rv.d3{transition-delay:.24s}
 .svc-i:hover .svc-t{color:var(--verm)}
 
 /* ============================================================
-   02 — TRACTION LEDGER (paper)
+   02 — PERSONAL LEDGER (paper)
    ============================================================ */
-.ledger{margin-top:var(--s4)}
-.lrow{
-  display:flex;justify-content:space-between;align-items:baseline;gap:var(--s3);
-  padding:clamp(1.25rem,3vw,2rem) 0;flex-wrap:wrap;
-}
-.llabel{font-weight:500;font-size:clamp(.9375rem,1.6vw,1.125rem);max-width:18em}
-.llabel .fine{display:block;font-size:.75rem;color:var(--gray-text);font-weight:400;letter-spacing:.06em}
-.lval-wrap{text-align:right;position:relative}
-.lval{
-  font-weight:700;font-size:clamp(3.5rem,8vw,7rem);line-height:1;letter-spacing:-0.02em;
-  font-variant-numeric:tabular-nums;white-space:nowrap;
-}
-.uscore{
-  display:block;height:8px;background:var(--verm);margin-top:.35rem;
-  transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease-out) 1s;
-}
-.lrow.done .uscore{transform:scaleX(1)}
-html:not(.js) .uscore{transform:none}
-.ret-dots{display:flex;gap:.6rem;justify-content:flex-end;margin-top:.8rem}
-.ret-dots i{
-  width:28px;height:28px;border-radius:50%;border:2px solid var(--verm);background:transparent;flex:none;
-}
-@keyframes dotPop{
-  0%{transform:scale(.2);background:transparent}
-  60%{transform:scale(1.3);background:var(--verm)}
-  100%{transform:scale(1);background:var(--verm)}
-}
-.lrow.done .ret-dots i{animation:dotPop .4s var(--ease-stamp) forwards;animation-delay:calc(var(--i) * 130ms)}
-html:not(.js) .ret-dots i{background:var(--verm)}
-.ret-stamp-wrap{position:absolute;right:0;top:-1.4em;pointer-events:none}
-.ledger-kick{
-  margin-top:var(--s3);font-family:var(--font-d);font-weight:900;font-synthesis:none;text-transform:uppercase;
-  font-size:clamp(1.05rem,2.4vw,1.6rem);line-height:1.3;
-}
+#ledger .doss{margin-top:var(--s4)}
 .footnotes{margin-top:var(--s3);font-size:.75rem;color:var(--gray-text);max-width:52em}
 .footnotes .dg{color:var(--blue)}
 
-.prior{margin-top:var(--s5);border:1px solid var(--rule);padding:clamp(1.5rem,4vw,3rem)}
-.prior .kicker{color:var(--gray-text)}
-.prior-name{
-  font-size:clamp(1.6rem,4vw,2.75rem);line-height:1;margin-top:var(--s2);
-}
-.prior-desc{margin-top:.6rem;font-weight:500;font-size:1rem;color:var(--gray-text)}
-.prior-quote{
-  font-family:var(--font-d);font-weight:900;font-synthesis:none;text-transform:uppercase;
-  font-size:clamp(1.5rem,3.5vw,2.5rem);line-height:1.1;margin-top:var(--s3);
-}
-.prior-quote .q{color:var(--verm)}
-.prior-body{margin-top:var(--s2);max-width:62ch}
-
 /* ============================================================
-   03 — JOURNEY
+   03 — JOURNEY: one spine, nodes, arrows
    ============================================================ */
-.s-journey{
-  background-image:linear-gradient(90deg,rgba(201,195,182,.3) 0 1px,transparent 1px);
-  background-size:calc(100%/12) 100%;
+.jrows{position:relative;--pl:3rem;--sx:.55rem;padding-left:var(--pl);margin-top:var(--s4);max-width:58rem}
+.jrow{position:relative;padding-bottom:clamp(2rem,4vw,2.75rem)}
+.jrow:last-child{padding-bottom:0}
+.jrow:not(:last-child)::before{
+  content:"";position:absolute;left:calc(var(--sx) - var(--pl));top:.45rem;bottom:-.45rem;width:2px;
+  background:var(--rule);transform:translateX(-50%);transform-origin:top;
 }
-.j-layout{display:grid;grid-template-columns:auto 1fr;gap:clamp(1rem,4vw,4rem)}
-.j-rail{position:relative}
-.j-rail-inner{
-  position:sticky;top:calc(var(--mast-h) + 3vh);
-  writing-mode:vertical-rl;
-  font-family:var(--font-d);font-weight:900;font-synthesis:none;text-transform:uppercase;
-  font-size:clamp(1.25rem,3vw,2.25rem);letter-spacing:.18em;line-height:1;
-  padding:1rem .25rem;
+html.js .jrows:not(.in) .jrow::before{transform:translateX(-50%) scaleY(0)}
+html.js .jrows.in .jrow::before{transition:transform .7s var(--ease-out) calc(var(--i) * 80ms + 200ms)}
+.jnode{
+  position:absolute;left:calc(var(--sx) - var(--pl));top:.45rem;
+  width:11px;height:11px;border-radius:50%;transform:translate(-50%,-50%);
+  background:var(--paper);border:2.5px solid var(--ink);
+  transition:transform .2s var(--ease-out),border-color .2s var(--ease-out);
 }
-.jrows{position:relative;z-index:1;--jg:2.2rem;--jx:.65rem;padding-left:var(--jg)}
-.jrows::before{
-  content:"";position:absolute;left:var(--jx);top:1.4rem;bottom:1.4rem;width:2px;
-  background:var(--rule);transform:translateX(-50%) scaleY(1);transform-origin:top;
+html.js .jrows:not(.in) .jnode{transform:translate(-50%,-50%) scale(0)}
+html.js .jrows.in .jnode{transition:transform .45s var(--ease-stamp) calc(var(--i) * 80ms + 350ms)}
+.jrow:not(:last-child)::after{
+  content:"";position:absolute;left:calc(var(--sx) - var(--pl));bottom:.9rem;transform:translateX(-50%);
+  border-left:4.5px solid transparent;border-right:4.5px solid transparent;border-top:7px solid var(--gray-text);
 }
-html.js .jrows:not(.in)::before{transform:translateX(-50%) scaleY(0)}
-html.js .jrows.in::before{transition:transform 1.6s var(--ease-out) .1s}
-.jrow .jnode{position:absolute;left:calc(var(--jx) - var(--jg) - var(--joff,0rem));top:0;bottom:0;width:0;pointer-events:none;z-index:0}
-.jnode::before{
-  content:"";position:absolute;top:clamp(1.9rem,3vw,2.6rem);left:0;transform:translateX(-50%) scale(1);
-  width:9px;height:9px;border-radius:50%;
-  background:var(--paper);border:2.5px solid var(--ink);box-sizing:border-box;
+.jmeta{
+  display:flex;align-items:center;gap:.7rem;line-height:1;
+  font-weight:700;font-size:.6875rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gray-text);
 }
-html.js .jrows:not(.in) .jnode::before{transform:translateX(-50%) scale(0)}
-html.js .jrows.in .jnode::before{transition:transform .45s var(--ease-stamp);transition-delay:calc(var(--i) * 80ms + 350ms)}
-.jrow.now .jnode::before{background:var(--verm);border-color:var(--verm);box-shadow:0 0 0 4px rgba(242,58,0,.16)}
-.jnode::after{
-  content:"";position:absolute;bottom:-5px;left:0;transform:translateX(-50%);
-  width:0;height:0;border-left:4.5px solid transparent;border-right:4.5px solid transparent;
-  border-top:7px solid var(--gray-text);opacity:1;
-}
-html.js .jrows:not(.in) .jnode::after{opacity:0}
-html.js .jrows.in .jnode::after{transition:opacity .5s var(--ease-out);transition-delay:calc(var(--i) * 80ms + 500ms)}
-.jrow:last-of-type .jnode::after{display:none}
-.jrow{
-  position:relative;display:block;
-  --joff:0rem;margin-left:var(--joff);
-  padding:clamp(1.3rem,2.8vw,1.9rem) clamp(1rem,2vw,1.75rem);
-  isolation:isolate;
-}
-.jrow:nth-of-type(even){--joff:clamp(1.5rem,7vw,6rem)}
-.jrow::before{
-  content:"";position:absolute;inset:0;background:var(--ink);
-  transform:scaleY(0);transform-origin:bottom;
-  transition:transform .2s var(--ease-wipe);z-index:0;
-}
-.jrow:hover::before,.jrow:focus-within::before{transform:scaleY(1)}
-.jrow > *{position:relative;z-index:1}
-.jrow .jidx{
-  position:absolute;left:clamp(.2rem,1vw,.75rem);top:50%;transform:translateY(-50%);
-  font-family:var(--font-d);font-weight:900;font-synthesis:none;
-  font-size:clamp(3.4rem,7vw,6rem);line-height:1;z-index:0;
-  color:transparent;-webkit-text-stroke:1.5px var(--rule);
-  font-variant-numeric:tabular-nums;transition:-webkit-text-stroke-color .18s var(--ease-out),opacity .18s var(--ease-out);
-  pointer-events:none;
-}
-.jmain{min-width:0;position:relative;z-index:1;padding-left:clamp(2.6rem,6vw,5rem)}
+.jmeta i{width:1.5rem;height:1px;background:var(--rule)}
+.jidx{color:var(--verm-text);font-variant-numeric:tabular-nums}
+.jstamp{font-size:.625rem;border-width:2px;padding:.25em .6em;margin-left:.3rem}
 .jorg{
-  font-family:var(--font-d);font-weight:900;font-synthesis:none;text-transform:uppercase;
-  font-size:clamp(1.35rem,3.2vw,2.6rem);line-height:1;letter-spacing:-0.01em;
+  margin-top:.65rem;font-family:var(--font-d);font-weight:900;font-synthesis:none;text-transform:uppercase;
+  font-size:clamp(1.35rem,2.6vw,2rem);line-height:1.05;letter-spacing:-0.01em;
   transition:color .18s var(--ease-out);
 }
-.jreg{
-  margin-top:.45rem;font-size:.9375rem;color:var(--gray-text);max-width:44em;
-  transition:color .18s var(--ease-out);
-}
-.jreg .lead{display:none}
-.jtag{
-  position:relative;z-index:1;
-  display:inline-flex;align-items:center;gap:.7em;
-  margin:.7rem 0 0 clamp(2.6rem,6vw,5rem);
-  padding:.35em .85em;border:1px solid var(--rule);border-radius:2px;
-  font-weight:700;font-size:.6563rem;letter-spacing:.18em;text-transform:uppercase;
-  white-space:nowrap;color:var(--gray-text);
-  transition:color .18s var(--ease-out),border-color .18s var(--ease-out);
-}
-.jarrow{
-  display:inline-block;opacity:0;transform:translateX(14px);
-  transition:opacity .2s var(--ease-out),transform .2s var(--ease-out);
-  font-weight:700;font-size:1.1rem;color:var(--verm);
-}
-.jrow:hover .jidx,.jrow:focus-within .jidx{-webkit-text-stroke-color:rgba(242,58,0,.6)}
-.jrow:hover .jorg,.jrow:hover .jreg,.jrow:hover .jtag,
-.jrow:focus-within .jorg,.jrow:focus-within .jreg,.jrow:focus-within .jtag{color:var(--paper)}
-.jrow:hover .jtag,.jrow:focus-within .jtag{border-color:rgba(244,241,234,.4)}
-.jrow:hover .jarrow,.jrow:focus-within .jarrow{opacity:1;transform:translateX(0)}
-html.js .jrow-anim{opacity:0;transform:translateX(-28px)}
+.jlink{text-decoration:none}
+.jlink .ext{width:.55em;height:.55em;stroke-width:2}
+.jreg{margin-top:.45rem;font-size:.9688rem;color:var(--gray-text);max-width:46em}
+.jrow:hover .jorg{color:var(--verm)}
+.jrow:hover .jnode{transform:translate(-50%,-50%) scale(1.25);border-color:var(--verm)}
+html.js .jrow-anim{opacity:0;transform:translateX(-20px)}
 html.js .jrows.in .jrow-anim{
   opacity:1;transform:none;
   transition:opacity .6s var(--ease-out),transform .6s var(--ease-out);
   transition-delay:calc(var(--i) * 80ms);
 }
-.jrow.now{transform:rotate(-2deg)}
-html.js .jrows.in .jrow-anim.now{transform:rotate(-2deg)}
 .jrow.now .jorg{color:var(--verm)}
-.jrow.now .jidx{-webkit-text-stroke-color:rgba(242,58,0,.55)}
-.jrow.now:hover .jorg,.jrow.now:focus-within .jorg{color:var(--paper)}
-.jrow.now:hover .jidx,.jrow.now:focus-within .jidx{-webkit-text-stroke-color:rgba(242,58,0,.75)}
+.jrow.now .jnode{background:var(--verm);border-color:var(--verm)}
+.jrow.now .jnode::after{
+  content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--verm);
+  animation:nodePulse 2.2s var(--ease-out) infinite;
+}
+@keyframes nodePulse{0%{opacity:.6;transform:scale(.6)}100%{opacity:0;transform:scale(1.8)}}
 
 /* ============================================================
    04 — MANIFESTO (vermilion detonation)
@@ -487,13 +403,14 @@ html.js .jrows.in .jrow-anim.now{transform:rotate(-2deg)}
 }
 .manif-kick{color:rgba(13,13,12,.8)}
 .manif-kick .no{color:var(--paper)}
-.mlines{display:flex;flex-direction:column;gap:.35em}
+.mlines{display:flex;flex-direction:column;gap:.5em}
 .mline{display:grid;width:fit-content;max-width:100%}
 .mline > span{
   grid-area:1/1;
   font-family:var(--font-d);font-weight:900;font-synthesis:none;text-transform:uppercase;
-  font-size:clamp(2.4rem,7.4vw,7rem);line-height:1.02;letter-spacing:-0.015em;
+  font-size:clamp(1.75rem,3.8vw,3.75rem);line-height:1.08;letter-spacing:-0.01em;
 }
+body.zh .mline > span{font-size:clamp(2rem,5.2vw,4.75rem)}
 .mline .mo{color:transparent;-webkit-text-stroke:1.5px var(--ink)}
 .mline .mf{color:var(--ink);clip-path:inset(0 calc((1 - var(--fill,0)) * 100%) 0 0)}
 html:not(.js) .mline .mf{clip-path:none}
@@ -757,10 +674,14 @@ body.zh .hobby .h-zh{display:block}
 @media (max-width:960px){
   .mast-date{display:none}
 }
+@media (max-width:900px){
+  .stats{grid-template-columns:1fr}
+  .stat,.stat:first-child{padding:1.25rem 0}
+  .stat + .stat{border-left:none;border-top:1px solid var(--rule)}
+  .stats-ink .stat + .stat{border-top-color:rgba(244,241,234,.22)}
+}
 @media (max-width:1100px) and (min-width:721px){
-  .svc{grid-template-columns:repeat(6,1fr)}
-  .svc-i{grid-column:span 2}
-  .svc-i:nth-child(n+4){grid-column:span 3}
+  .svc{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:720px){
   :root{--mast-h:59px}
@@ -775,22 +696,10 @@ body.zh .hobby .h-zh{display:block}
   .svc-no{grid-column:3;grid-row:1}
   .svc-d{grid-column:2 / -1;grid-row:2}
   .svc-rail{font-size:.625rem;letter-spacing:.12em}
-  .vlabel{display:none}
-  .j-layout{grid-template-columns:1fr}
-  .j-rail{display:none}
-  .jrows{--jg:1.5rem;--jx:.4rem}
-  .jrow:nth-of-type(even){--joff:clamp(.5rem,4vw,1.5rem)}
-  .jrow .jidx{font-size:2.6rem;-webkit-text-stroke-width:1.2px}
-  .jmain{padding-left:2.1rem}
-  .jtag{margin-left:2.1rem}
-  .lrow{flex-direction:column;align-items:flex-start;gap:.5rem}
-  .lval-wrap{text-align:left}
-  .ret-dots{justify-content:flex-start}
-  .uscore{transform-origin:left}
+  .jrows{--pl:1.9rem;--sx:.4rem}
+  .jmeta{flex-wrap:wrap;row-gap:.5rem}
   .colophon{grid-template-columns:1fr}
-  .gnum span{font-size:clamp(9rem,38vw,14rem)}
   .copied-stamp{left:4%}
-  .ret-stamp-wrap{position:static;margin:.75rem 0 .25rem}
   .hobbies{grid-template-columns:repeat(2,1fr)}
   .field-notes{grid-template-columns:1fr}
   .doss{grid-template-columns:1fr;margin-bottom:var(--s3)}
@@ -816,10 +725,9 @@ body.zh .hobby .h-zh{display:block}
   html.js [data-io] .rv{opacity:1;transform:none}
   html.js .jrow-anim{opacity:1;transform:none}
   .hair{transform:none}
-  .uscore{transform:none}
-  .ret-dots i{background:var(--verm);animation:none}
+  html.js .stat[data-io]{opacity:1;transform:none}
+  html.js .jrows .jnode{transform:translate(-50%,-50%)}
   .uline path,.an-type,.an-trail{stroke-dashoffset:0 !important}
-  .gnum .f{clip-path:none}
   .mline .mf{clip-path:none}
   .h-ic *{animation:none !important;offset-distance:60% !important}
   .h-ic .an-heart{opacity:1}
@@ -834,7 +742,7 @@ body.zh .hobby .h-zh{display:block}
 <header class="masthead">
   <div class="mast-row">
     <a class="mast-name" href="#top">Selina Huang</a>
-    <p class="mast-date" data-en="Founder &amp; CEO — San Francisco Bay Area" data-zh="创始人 &amp; CEO — 旧金山湾区">Founder &amp; CEO — San Francisco Bay Area</p>
+    <p class="mast-date" data-en="Founder &amp; CEO, Aigeo — San Francisco Bay Area" data-zh="Aigeo 创始人 &amp; CEO — 旧金山湾区">Founder &amp; CEO, Aigeo — San Francisco Bay Area</p>
     <nav class="mast-nav" data-en-aria="Section navigation" data-zh-aria="页面导航" aria-label="Section navigation">
       <a href="#now" data-en-aria="01 — Now: Aigeo" data-zh-aria="01 — 现在：Aigeo" aria-label="01 — Now: Aigeo">01</a>
       <a href="#ledger" data-en-aria="02 — The personal ledger" data-zh-aria="02 — 个人账本" aria-label="02 — The personal ledger">02</a>
@@ -851,20 +759,14 @@ body.zh .hobby .h-zh{display:block}
 <main id="main">
 <!-- ================= HERO ================= -->
 <section class="hero" id="top" data-en-aria="Cover" data-zh-aria="封面" aria-label="Cover">
-  <div class="hero-ghost" aria-hidden="true" data-en="@" data-zh="介">@</div>
-  <p class="kicker hero-kick"><span class="no">Nº 00</span> <span data-en="Marketer by trade. Founder by habit." data-zh="营销是本行，创业是习惯。">Marketer by trade. Founder by habit.</span></p>
   <h1 class="hero-name" data-en-aria="Selina Huang" data-zh-aria="Selina Huang" aria-label="Selina Huang">
     <span class="hline l1" aria-hidden="true"><span>Selina</span></span>
     <span class="hline l2 outline" aria-hidden="true"><span>Huang</span></span>
   </h1>
   <div class="hair hero-rule in"></div>
-  <p class="hero-dek">
-    <span data-en="Serial founder. Sports addict. Amateur chef. 20+ countries deep. Now running Aigeo — " data-zh="连续创业者。运动上瘾，业余大厨，去过 20+ 个国家。现在专注 Aigeo——">Serial founder. Sports addict. Amateur chef. 20+ countries deep. Now running Aigeo — </span><span class="uline"><span data-en="full-service marketing" data-zh="全案营销">full-service marketing</span><svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path d="M2 6 C 18 3, 34 8, 52 5 S 84 7, 98 4" pathLength="1"/></svg></span><span data-en=", from AI search to Silicon Valley events." data-zh="，从 AI 搜索做到硅谷线下活动。">, from AI search to Silicon Valley events.</span>
-  </p>
+  <p class="hero-dek"><span data-en="Serial founder. Sports addict. Amateur chef. 20+ countries deep. Now running " data-zh="连续创业者。运动上瘾，业余大厨，去过 20+ 个国家。现在专注 ">Serial founder. Sports addict. Amateur chef. 20+ countries deep. Now running </span><a class="uline hero-co" href="https://theaigeo.com" target="_blank" rel="noopener">Aigeo<svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path d="M2 6 C 18 3, 34 8, 52 5 S 84 7, 98 4" pathLength="1"/></svg></a><span data-en=", an AI-native MarTech company — from our own software to Silicon Valley events." data-zh="——一家 AI 原生的 MarTech 公司，从自研软件做到硅谷线下活动。">, an AI-native MarTech company — from our own software to Silicon Valley events.</span></p>
   <div class="hero-foot">
-    <div class="issue">
-      <p class="mono coord" aria-hidden="true" data-en="37.77°N · 122.42°W — SF BAY AREA" data-zh="37.77°N · 122.42°W — 旧金山湾区">37.77°N · 122.42°W — SF BAY AREA</p>
-    </div>
+    <p class="mono coord" aria-hidden="true" data-en="37.77°N · 122.42°W — SF BAY AREA" data-zh="37.77°N · 122.42°W — 旧金山湾区">37.77°N · 122.42°W — SF BAY AREA</p>
     <div class="scue" aria-hidden="true">
       <svg viewBox="0 0 100 100">
         <defs><path id="cir" d="M50,8 a42,42 0 1,1 -0.01,0"/></defs>
@@ -873,48 +775,55 @@ body.zh .hobby .h-zh{display:block}
       </svg>
     </div>
   </div>
-  <div class="vlabel" aria-hidden="true" data-en="Founder &amp; CEO" data-zh="创始人 &amp; CEO">Founder &amp; CEO</div>
 </section>
 
 <!-- ================= 01 NOW: AIGEO ================= -->
-<section class="s-now on-ink" id="now" data-gnum>
-  <div class="gwrap" aria-hidden="true">
-    <div class="gnum"><span class="o">01</span><span class="f">01</span></div>
-  </div>
+<section class="s-now on-ink" id="now">
   <div class="sec-head" data-io>
     <p class="kicker rv"><span class="no">Nº 01</span> <span data-en="Now" data-zh="现在">Now</span></p>
-    <h2 class="disp now-head rv d1"><span class="red">Ai</span>geo</h2>
-    <p class="now-sub rv d2"><span data-en="Full-service marketing — " data-zh="全案营销——">Full-service marketing — </span><span class="hl" data-en="from AI answers to the room" data-zh="从 AI 回答，到线下现场">from AI answers to the room</span><span data-en="." data-zh="。">.</span></p>
-    <p class="now-dek rv d3" data-en="Aigeo is a full-service marketing company. One team covers the whole range — GEO, SEO, social media promotion, PR, and in-person events in Silicon Valley — so a brand gets named by AI, found in search, talked about online, covered by the press, and met face to face." data-zh="Aigeo 是一家全案营销公司。一支团队覆盖全链路——GEO、SEO、社媒推广、PR，以及在硅谷举办的线下活动——让品牌被 AI 推荐、被搜索找到、在社媒上被讨论、被媒体报道，也被人当面记住。">Aigeo is a full-service marketing company. One team covers the whole range — GEO, SEO, social media promotion, PR, and in-person events in Silicon Valley — so a brand gets named by AI, found in search, talked about online, covered by the press, and met face to face.</p>
+    <h2 class="disp now-head rv d1"><a href="https://theaigeo.com" target="_blank" rel="noopener"><span class="red">Ai</span>geo</a></h2>
+    <p class="now-sub rv d2"><span data-en="AI-native MarTech — " data-zh="AI 原生的营销科技公司——">AI-native MarTech — </span><span class="hl" data-en="software and marketing, built as one" data-zh="软件与营销，一体打造">software and marketing, built as one</span><span data-en="." data-zh="。">.</span></p>
+    <p class="now-dek rv d3" data-en="Aigeo is an AI-native marketing technology company. We build and sell our own software, and run marketing the AI-native way — GEO, SEO, social media, PR, and in-person events in Silicon Valley — so a brand gets named by AI, found in search, covered by the press, and met face to face." data-zh="Aigeo 是一家 AI 原生的营销科技（MarTech）公司。我们自研并销售软件系统，也用 AI 原生的方式做营销——GEO、SEO、社媒推广、PR，以及硅谷线下活动——让品牌被 AI 推荐、被搜索找到、被媒体报道，也被人当面记住。">Aigeo is an AI-native marketing technology company. We build and sell our own software, and run marketing the AI-native way — GEO, SEO, social media, PR, and in-person events in Silicon Valley — so a brand gets named by AI, found in search, covered by the press, and met face to face.</p>
+    <p class="rv d3"><a class="now-cta" href="https://theaigeo.com" target="_blank" rel="noopener"><span data-en="Visit theaigeo.com" data-zh="访问 theaigeo.com">Visit theaigeo.com</span><svg class="ext" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5 L8.5 3.5 M4.5 3.5 H8.5 V7.5"/></svg></a></p>
   </div>
 
   <div class="sec-body">
+    <div class="stats stats-ink">
+      <div class="stat" data-io><p class="stat-k" data-en="Annual recurring revenue" data-zh="年度经常性收入 ARR">Annual recurring revenue</p><p class="stat-v tnum">$1M</p></div>
+      <div class="stat" data-io><p class="stat-k" data-en="Global media network" data-zh="全球媒体资源">Global media network</p><p class="stat-v tnum" data-en="1,000+ outlets" data-zh="1000+ 家">1,000+ outlets</p></div>
+      <div class="stat" data-io><p class="stat-k" data-en="Trusted by" data-zh="获得信任">Trusted by</p><p class="stat-v" data-en="Fortune 500" data-zh="财富 500 强">Fortune 500</p></div>
+    </div>
     <div class="svc-wrap" data-io>
-      <p class="svc-rail" aria-hidden="true"><span data-en="AI &amp; search" data-zh="AI 与搜索">AI &amp; search</span><i></i><span data-en="In the room" data-zh="线下现场">In the room</span></p>
+      <p class="svc-rail" aria-hidden="true"><span data-en="Software &amp; AI" data-zh="软件与 AI">Software &amp; AI</span><i></i><span data-en="In the room" data-zh="线下现场">In the room</span></p>
       <ol class="svc">
         <li class="svc-i rv">
+          <svg class="h-ic" viewBox="0 0 80 56" aria-hidden="true"><rect x="8" y="6" width="64" height="44" rx="3"/><path class="thin" d="M8 14 H72"/><circle class="verm-f" cx="14" cy="10" r="1.6"/><g class="an-eq"><rect class="b1" x="18" y="34" width="6" height="12"/><rect class="b2" x="29" y="28" width="6" height="18"/><rect class="b3" x="40" y="31" width="6" height="15"/><rect class="b4" x="51" y="24" width="6" height="22"/></g><path class="an-type verm-s" d="M17 26 L31 20 L43 23 L62 16" pathLength="1"/></svg>
+          <h3 class="svc-t" data-en="Platform" data-zh="软件平台">Platform</h3><span class="svc-no mono" aria-hidden="true">01</span>
+          <p class="svc-d" data-en="Our own AI-native software — track and grow brand visibility across AI engines." data-zh="自研 AI 原生软件系统——追踪并提升品牌在各大 AI 引擎中的可见度。">Our own AI-native software — track and grow brand visibility across AI engines.</p>
+        </li>
+        <li class="svc-i rv" style="transition-delay:0.06s">
           <svg class="h-ic" viewBox="0 0 80 56" aria-hidden="true"><path d="M14 6 H66 a6 6 0 0 1 6 6 V32 a6 6 0 0 1 -6 6 H32 L22 47 V38 H14 a6 6 0 0 1 -6 -6 V12 a6 6 0 0 1 6 -6 Z"/><path class="an-type verm-s" d="M18 16 H44" pathLength="1"/><path class="an-type t2 thin" d="M18 23 H62" pathLength="1"/><path class="an-type t3 thin" d="M18 30 H52" pathLength="1"/></svg>
-          <h3 class="svc-t">GEO</h3><span class="svc-no mono" aria-hidden="true">01</span>
+          <h3 class="svc-t">GEO</h3><span class="svc-no mono" aria-hidden="true">02</span>
           <p class="svc-d" data-en="Named in AI answers — ChatGPT, Gemini, Perplexity." data-zh="出现在 ChatGPT、Gemini、Perplexity 的回答里。">Named in AI answers — ChatGPT, Gemini, Perplexity.</p>
         </li>
-        <li class="svc-i rv" style="transition-delay:.06s">
+        <li class="svc-i rv" style="transition-delay:0.12s">
           <svg class="h-ic" viewBox="0 0 80 56" aria-hidden="true"><path class="thin" d="M8 12 H40 M8 24 H40 M8 36 H40 M8 48 H40"/><rect class="an-rank verm-f" x="6" y="45" width="36" height="6" rx="1"/><circle cx="58" cy="24" r="10"/><path d="M65 31 L74 40"/></svg>
-          <h3 class="svc-t">SEO</h3><span class="svc-no mono" aria-hidden="true">02</span>
+          <h3 class="svc-t">SEO</h3><span class="svc-no mono" aria-hidden="true">03</span>
           <p class="svc-d" data-en="Found where people still search." data-zh="在搜索引擎里被找到。">Found where people still search.</p>
         </li>
-        <li class="svc-i rv" style="transition-delay:.12s">
+        <li class="svc-i rv" style="transition-delay:0.18s">
           <svg class="h-ic" viewBox="0 0 80 56" aria-hidden="true"><rect x="22" y="5" width="26" height="46" rx="4"/><path class="thin" d="M30 44 H40"/><g transform="translate(60 40)"><path class="an-heart verm-f" d="M0 8 L-5.6 2.4 A3.5 3.5 0 0 1 0 -1.6 A3.5 3.5 0 0 1 5.6 2.4 Z"/></g><g transform="translate(68 30)"><path class="an-heart h2 verm-f" d="M0 8 L-5.6 2.4 A3.5 3.5 0 0 1 0 -1.6 A3.5 3.5 0 0 1 5.6 2.4 Z"/></g></svg>
-          <h3 class="svc-t" data-en="Social" data-zh="社媒推广">Social</h3><span class="svc-no mono" aria-hidden="true">03</span>
+          <h3 class="svc-t" data-en="Social" data-zh="社媒推广">Social</h3><span class="svc-no mono" aria-hidden="true">04</span>
           <p class="svc-d" data-en="Promotion where attention lives." data-zh="在注意力聚集的地方做推广。">Promotion where attention lives.</p>
         </li>
-        <li class="svc-i rv" style="transition-delay:.18s">
+        <li class="svc-i rv" style="transition-delay:0.24s">
           <svg class="h-ic" viewBox="0 0 80 56" aria-hidden="true"><path d="M10 22 H20 L44 10 V46 L20 34 H10 Z"/><path d="M18 34 L22 46 H28 L25 35"/><path class="an-wave" d="M52 22 q4 6 0 12"/><path class="an-wave w2" d="M58 17 q7 11 0 22"/><path class="an-wave w3 verm-s" d="M64 12 q10 16 0 32"/></svg>
-          <h3 class="svc-t">PR</h3><span class="svc-no mono" aria-hidden="true">04</span>
-          <p class="svc-d" data-en="Stories the press wants to cover." data-zh="讲出媒体愿意报道的故事。">Stories the press wants to cover.</p>
+          <h3 class="svc-t">PR</h3><span class="svc-no mono" aria-hidden="true">05</span>
+          <p class="svc-d" data-en="1,000+ leading media outlets worldwide — press releases and media distribution." data-zh="拥有 1000+ 家全球知名媒体资源，帮企业发布新闻通稿、做媒体发布。">1,000+ leading media outlets worldwide — press releases and media distribution.</p>
         </li>
-        <li class="svc-i rv" style="transition-delay:.24s">
+        <li class="svc-i rv" style="transition-delay:0.30s">
           <svg class="h-ic" viewBox="0 0 80 56" aria-hidden="true"><path class="thin an-spot" d="M40 2 L26 38 M40 2 L54 38"/><circle class="verm-f" cx="40" cy="25" r="3.2"/><path d="M40 30 V37"/><path d="M16 38 H64"/><circle class="an-bob" cx="22" cy="48" r="3"/><circle class="an-bob b2" cx="34" cy="50" r="3"/><circle class="an-bob b3" cx="46" cy="50" r="3"/><circle class="an-bob b4" cx="58" cy="48" r="3"/></svg>
-          <h3 class="svc-t" data-en="Events" data-zh="线下活动">Events</h3><span class="svc-no mono" aria-hidden="true">05</span>
+          <h3 class="svc-t" data-en="Events" data-zh="线下活动">Events</h3><span class="svc-no mono" aria-hidden="true">06</span>
           <p class="svc-d" data-en="In-person events, hosted in Silicon Valley." data-zh="在硅谷举办的线下活动。">In-person events, hosted in Silicon Valley.</p>
         </li>
       </ol>
@@ -923,151 +832,93 @@ body.zh .hobby .h-zh{display:block}
 </section>
 
 <!-- ================= 02 PERSONAL LEDGER ================= -->
-<section id="ledger" data-gnum>
-  <div class="gwrap" aria-hidden="true">
-    <div class="gnum"><span class="o">02</span><span class="f">02</span></div>
-  </div>
+<section id="ledger">
   <div class="sec-head" data-io>
-    <h2 class="kicker rv"><span class="no">Nº 02</span> <span data-en="Proof — the personal ledger" data-zh="实证——个人账本">Proof — the personal ledger</span></h2>
+    <p class="kicker rv"><span class="no">Nº 02</span> <span data-en="Profile" data-zh="背景">Profile</span></p>
+    <h2 class="disp sec-title rv d1" data-en="The personal ledger" data-zh="个人账本">The personal ledger</h2>
   </div>
   <div class="sec-body">
     <ul class="doss" data-io>
-      <li class="rv" style="transition-delay:.0s"><span class="d-m mono" aria-hidden="true">▸</span><span data-en="Silicon Valley founder — Founder &amp; CEO of Aigeo" data-zh="硅谷创业者 — Aigeo 创始人 &amp; CEO">Silicon Valley founder — Founder &amp; CEO of Aigeo</span></li>
+      <li class="rv" style="transition-delay:.0s"><span class="d-m mono" aria-hidden="true">▸</span><span data-en="Silicon Valley founder — Founder &amp; CEO of Aigeo, an AI-native MarTech company" data-zh="硅谷创业者 — AI 原生 MarTech 公司 Aigeo 创始人 &amp; CEO">Silicon Valley founder — Founder &amp; CEO of Aigeo, an AI-native MarTech company</span></li>
       <li class="rv" style="transition-delay:.05s"><span class="d-m mono" aria-hidden="true">▸</span><span data-en="Among the earliest GEO practitioners overseas — first wave to open-source the methodology" data-zh="海外 GEO 赛道最早期实践者之一，首批开源方法论布道者">Among the earliest GEO practitioners overseas — first wave to open-source the methodology</span></li>
       <li class="rv" style="transition-delay:.1s"><span class="d-m mono" aria-hidden="true">▸</span><span data-en="Author of Digital Marketing (Tsinghua University Press)" data-zh="《数字营销》作者（清华大学出版社）">Author of Digital Marketing (Tsinghua University Press)</span></li>
       <li class="rv" style="transition-delay:.15s"><span class="d-m mono" aria-hidden="true">▸</span><span data-en="Ex-4A agency; ex-cybersecurity consultant at a top consulting firm" data-zh="前 4A 广告公司；前头部咨询公司网络安全顾问">Ex-4A agency; ex-cybersecurity consultant at a top consulting firm</span></li>
     </ul>
-    <div class="ledger">
-      <div class="hair" data-io></div>
-      <div class="lrow" data-io data-count="degrees">
-        <p class="llabel" data-en="Degrees — dual bachelor's + Brown MPA" data-zh="学位——双学士 + 布朗 MPA">Degrees — dual bachelor's + Brown MPA</p>
-        <div class="lval-wrap">
-          <p class="lval tnum"><span class="cnum">3</span><a class="dag" href="#fn1" data-en-aria="Footnote 1" data-zh-aria="脚注 1" aria-label="Footnote 1">†</a></p>
-          <span class="uscore" aria-hidden="true"></span>
-        </div>
-      </div>
-      <div class="hair" data-io></div>
-      <div class="lrow" data-io data-count="companies">
-        <p class="llabel" data-en="Companies founded — Shanghai ×2, Japan, US" data-zh="创立过的公司——上海 ×2、日本、美国">Companies founded — Shanghai ×2, Japan, US</p>
-        <div class="lval-wrap">
-          <p class="lval tnum"><span class="cnum">4</span></p>
-          <span class="uscore" aria-hidden="true"></span>
-        </div>
-      </div>
-      <div class="hair" data-io></div>
-      <div class="lrow" data-io data-count="rank">
-        <p class="llabel" data-en="Overall rank in program, senior year" data-zh="大四学年，全专业综合排名">Overall rank in program, senior year</p>
-        <div class="lval-wrap">
-          <div class="ret-stamp-wrap"><span class="stamp" data-stamp data-rankstamp aria-hidden="true" data-en="Top of class" data-zh="专业第一">Top of class</span></div>
-          <p class="lval tnum"><span class="cnum">#1</span></p>
-          <span class="uscore" aria-hidden="true"></span>
-        </div>
-      </div>
-      <div class="hair" data-io></div>
+    <div class="stats">
+      <div class="stat" data-io data-count="degrees"><p class="stat-k" data-en="Degrees" data-zh="学位">Degrees</p><p class="stat-v tnum"><span class="cnum">3</span><a class="dag" href="#fn1" data-en-aria="Footnote 1" data-zh-aria="脚注 1" aria-label="Footnote 1">†</a></p><p class="stat-n" data-en="Dual bachelor's + Brown MPA" data-zh="双学士 + 布朗 MPA">Dual bachelor's + Brown MPA</p></div>
+      <div class="stat" data-io data-count="companies"><p class="stat-k" data-en="Companies founded" data-zh="创立的公司">Companies founded</p><p class="stat-v tnum"><span class="cnum">4</span></p><p class="stat-n" data-en="Shanghai ×2, Japan, US" data-zh="上海 ×2、日本、美国">Shanghai ×2, Japan, US</p></div>
+      <div class="stat" data-io data-count="rank"><p class="stat-k" data-en="Rank in program" data-zh="专业排名">Rank in program</p><p class="stat-v tnum"><span class="cnum">#1</span><span class="stamp stat-stamp" data-stamp data-rankstamp aria-hidden="true" data-en="Top of class" data-zh="专业第一">Top of class</span></p><p class="stat-n" data-en="Overall, senior year" data-zh="大四学年综合排名">Overall, senior year</p></div>
     </div>
     <p class="footnotes" id="fn1"><span class="dg">†</span> <span data-en="Dual bachelor's: Shanghai University × University of Technology Sydney; MPA: Brown University, 2024–2025, cross-registered at Harvard. Honors: national first prize (international-trade track) at the national business challenge; top-tier scholarship." data-zh="双学士：上海大学 × 悉尼科技大学；MPA：布朗大学 2024–2025，含哈佛跨校选课。获奖：商业挑战赛国际贸易组全国一等奖、特等奖学金。">Dual bachelor's: Shanghai University × University of Technology Sydney; MPA: Brown University, 2024–2025, cross-registered at Harvard. Honors: national first prize (international-trade track) at the national business challenge; top-tier scholarship.</span></p>
   </div>
 </section>
 
 <!-- ================= 03 JOURNEY ================= -->
-<section class="s-journey" id="journey" data-gnum>
-  <div class="gwrap" aria-hidden="true">
-    <div class="gnum"><span class="o">03</span><span class="f">03</span></div>
-  </div>
+<section class="s-journey" id="journey">
   <div class="sec-head" data-io>
-    <h2 class="kicker rv"><span class="no">Nº 03</span> <span data-en="The route" data-zh="一路走来">The route</span></h2>
+    <p class="kicker rv"><span class="no">Nº 03</span> <span data-en="Journey" data-zh="经历">Journey</span></p>
+    <h2 class="disp sec-title rv d1" data-en="The route" data-zh="一路走来">The route</h2>
   </div>
   <div class="sec-body">
-    <div class="j-layout">
-      <div class="j-rail" aria-hidden="true">
-        <div class="j-rail-inner" data-en="The Route" data-zh="旅程 The Route">The Route</div>
-      </div>
-      <div class="jrows" data-io>
+    <div class="jrows" data-io>
         <article class="jrow jrow-anim" style="--i:0">
           <span class="jnode" aria-hidden="true"></span>
-          <p class="jidx">01</p>
-          <div class="jmain">
-            <h3 class="jorg" data-en="The early years" data-zh="少年时代">The early years</h3>
-            <p class="jreg"><span data-en="Restless from the start — founded a teen sex-education nonprofit in high school; it brought an invitation to the UN Youth Assembly and a national youth-leadership award." data-zh="从小喜欢折腾——高中创立青少年性教育科普公益组织，收到联合国青年大会邀请，并获全国性比赛的青年领袖奖。">Restless from the start — founded a teen sex-education nonprofit in high school; it brought an invitation to the UN Youth Assembly and a national youth-leadership award.</span><span class="lead" aria-hidden="true"></span></p>
-          </div>
-          <p class="jtag"><span data-en="Nonprofit" data-zh="公益">Nonprofit</span><span class="jarrow" aria-hidden="true">→</span></p>
+          <p class="jmeta"><span class="jidx">01</span><i aria-hidden="true"></i><span class="jtag" data-en="Nonprofit" data-zh="公益">Nonprofit</span></p>
+          <h3 class="jorg" data-en="The early years" data-zh="少年时代">The early years</h3>
+          <p class="jreg" data-en="Restless from the start — founded a teen sex-education nonprofit in high school; it brought an invitation to the UN Youth Assembly and a national youth-leadership award." data-zh="从小喜欢折腾——高中创立青少年性教育科普公益组织，收到联合国青年大会邀请，并获全国性比赛的青年领袖奖。">Restless from the start — founded a teen sex-education nonprofit in high school; it brought an invitation to the UN Youth Assembly and a national youth-leadership award.</p>
         </article>
         <article class="jrow jrow-anim" style="--i:1">
           <span class="jnode" aria-hidden="true"></span>
-          <p class="jidx">02</p>
-          <div class="jmain">
-            <h3 class="jorg" data-en="Shanghai Univ. × UTS Sydney" data-zh="上海大学 × 悉尼科技大学">Shanghai Univ. × UTS Sydney</h3>
-            <p class="jreg"><span data-en="Dual bachelor's across two hemispheres — #1 overall in senior year, with a national business-competition first prize along the way." data-zh="横跨两个半球的双学位——大四全专业综合第一，途中拿下全国商赛一等奖。">Dual bachelor's across two hemispheres — #1 overall in senior year, with a national business-competition first prize along the way.</span><span class="lead" aria-hidden="true"></span></p>
-          </div>
-          <p class="jtag"><span data-en="Dual degree" data-zh="双学位">Dual degree</span><span class="jarrow" aria-hidden="true">→</span></p>
+          <p class="jmeta"><span class="jidx">02</span><i aria-hidden="true"></i><span class="jtag" data-en="Dual degree" data-zh="双学位">Dual degree</span></p>
+          <h3 class="jorg" data-en="Shanghai Univ. × UTS Sydney" data-zh="上海大学 × 悉尼科技大学">Shanghai Univ. × UTS Sydney</h3>
+          <p class="jreg" data-en="Dual bachelor's across two hemispheres — #1 overall in senior year, with a national business-competition first prize along the way." data-zh="横跨两个半球的双学位——大四全专业综合第一，途中拿下全国商赛一等奖。">Dual bachelor's across two hemispheres — #1 overall in senior year, with a national business-competition first prize along the way.</p>
         </article>
-        <article class="jrow jrow-anim" style="--i:1">
+        <article class="jrow jrow-anim" style="--i:2">
           <span class="jnode" aria-hidden="true"></span>
-          <p class="jidx">03</p>
-          <div class="jmain">
-            <h3 class="jorg" data-en="Qiancheng Qizhi, Shanghai" data-zh="上海千橙齐智有限公司">Qiancheng Qizhi, Shanghai</h3>
-            <p class="jreg"><span data-en="Founded during undergrad — campus marketing, channel sales, and AI software development." data-zh="本科期间创业——校园市场、渠道，和 AI 软件开发。">Founded during undergrad — campus marketing, channel sales, and AI software development.</span><span class="lead" aria-hidden="true"></span></p>
-          </div>
-          <p class="jtag"><span data-en="Founder" data-zh="创业">Founder</span><span class="jarrow" aria-hidden="true">→</span></p>
-        </article>
-        <article class="jrow jrow-anim" style="--i:1">
-          <span class="jnode" aria-hidden="true"></span>
-          <p class="jidx">04</p>
-          <div class="jmain">
-            <h3 class="jorg" data-en="Deloitte" data-zh="德勤 Deloitte">Deloitte</h3>
-            <p class="jreg"><span data-en="Cyber-security consulting — how big organizations defend themselves, from the inside." data-zh="网络安全咨询——从内部看清，大机构如何防守。">Cyber-security consulting — how big organizations defend themselves, from the inside.</span><span class="lead" aria-hidden="true"></span></p>
-          </div>
-          <p class="jtag"><span data-en="Cyber security" data-zh="网络安全">Cyber security</span><span class="jarrow" aria-hidden="true">→</span></p>
+          <p class="jmeta"><span class="jidx">03</span><i aria-hidden="true"></i><span class="jtag" data-en="Founder" data-zh="创业">Founder</span></p>
+          <h3 class="jorg" data-en="Qiancheng Qizhi, Shanghai" data-zh="上海千橙齐智有限公司">Qiancheng Qizhi, Shanghai</h3>
+          <p class="jreg" data-en="Founded during undergrad — campus marketing, channel sales, and AI software development." data-zh="本科期间创业——校园市场、渠道，和 AI 软件开发。">Founded during undergrad — campus marketing, channel sales, and AI software development.</p>
         </article>
         <article class="jrow jrow-anim" style="--i:3">
           <span class="jnode" aria-hidden="true"></span>
-          <p class="jidx">05</p>
-          <div class="jmain">
-            <h3 class="jorg" data-en="BNP Paribas" data-zh="法国巴黎银行 BNP">BNP Paribas</h3>
-            <p class="jreg"><span data-en="Global banking, global stakes — finance at scale: precision, risk, and discipline." data-zh="全球银行，全球分量——规模化的金融世界：精确、风险、纪律。">Global banking, global stakes — finance at scale: precision, risk, and discipline.</span><span class="lead" aria-hidden="true"></span></p>
-          </div>
-          <p class="jtag"><span data-en="Banking" data-zh="银行">Banking</span><span class="jarrow" aria-hidden="true">→</span></p>
+          <p class="jmeta"><span class="jidx">04</span><i aria-hidden="true"></i><span class="jtag" data-en="Cyber security" data-zh="网络安全">Cyber security</span></p>
+          <h3 class="jorg" data-en="Deloitte" data-zh="德勤 Deloitte">Deloitte</h3>
+          <p class="jreg" data-en="Cyber-security consulting — how big organizations defend themselves, from the inside." data-zh="网络安全咨询——从内部看清，大机构如何防守。">Cyber-security consulting — how big organizations defend themselves, from the inside.</p>
         </article>
-        <article class="jrow jrow-anim" style="--i:9">
+        <article class="jrow jrow-anim" style="--i:4">
           <span class="jnode" aria-hidden="true"></span>
-          <p class="jidx">06</p>
-          <div class="jmain">
-            <h3 class="jorg" data-en="Brown × Harvard" data-zh="布朗大学 × 哈佛">Brown × Harvard</h3>
-            <p class="jreg"><span data-en="MPA at Brown, 2024–2025 — cross-registered into Harvard coursework." data-zh="布朗大学 MPA，2024–2025——同时在哈佛跨校修课。">MPA at Brown, 2024–2025 — cross-registered into Harvard coursework.</span><span class="lead" aria-hidden="true"></span></p>
-          </div>
-          <p class="jtag"><span data-en="MPA" data-zh="公共管理硕士">MPA</span><span class="jarrow" aria-hidden="true">→</span></p>
+          <p class="jmeta"><span class="jidx">05</span><i aria-hidden="true"></i><span class="jtag" data-en="Banking" data-zh="银行">Banking</span></p>
+          <h3 class="jorg" data-en="BNP Paribas" data-zh="法国巴黎银行 BNP">BNP Paribas</h3>
+          <p class="jreg" data-en="Global banking, global stakes — finance at scale: precision, risk, and discipline." data-zh="全球银行，全球分量——规模化的金融世界：精确、风险、纪律。">Global banking, global stakes — finance at scale: precision, risk, and discipline.</p>
         </article>
-        <article class="jrow jrow-anim" style="--i:7">
+        <article class="jrow jrow-anim" style="--i:5">
           <span class="jnode" aria-hidden="true"></span>
-          <p class="jidx">07</p>
-          <div class="jmain">
-            <h3 class="jorg">sparkco</h3>
-            <p class="jreg"><span data-en="Graduated and moved straight to the Bay Area — building full-time." data-zh="从布朗毕业后直接搬到湾区，全职创业。">Graduated and moved straight to the Bay Area — building full-time.</span><span class="lead" aria-hidden="true"></span></p>
-          </div>
-          <p class="jtag"><span data-en="Cofounder &amp; CMO" data-zh="联合创始人 &amp; CMO">Cofounder &amp; CMO</span><span class="jarrow" aria-hidden="true">→</span></p>
+          <p class="jmeta"><span class="jidx">06</span><i aria-hidden="true"></i><span class="jtag" data-en="MPA" data-zh="公共管理硕士">MPA</span></p>
+          <h3 class="jorg" data-en="Brown × Harvard" data-zh="布朗大学 × 哈佛">Brown × Harvard</h3>
+          <p class="jreg" data-en="MPA at Brown, 2024–2025 — cross-registered into Harvard coursework." data-zh="布朗大学 MPA，2024–2025——同时在哈佛跨校修课。">MPA at Brown, 2024–2025 — cross-registered into Harvard coursework.</p>
         </article>
-        <article class="jrow jrow-anim now" style="--i:11">
+        <article class="jrow jrow-anim" style="--i:6">
           <span class="jnode" aria-hidden="true"></span>
-          <p class="jidx">08</p>
-          <div class="jmain">
-            <h3 class="jorg">Aigeo</h3>
-            <p class="jreg"><span data-en="Started with GEO, grew into full-service marketing — from AI answers to the room." data-zh="从 GEO 起步，长成全案营销公司——从 AI 的回答，一路做到线下现场。">Started with GEO, grew into full-service marketing — from AI answers to the room.</span><span class="lead" aria-hidden="true"></span></p>
-          </div>
-          <p class="jtag"><span class="stamp" data-stamp data-nowstamp data-en="Now" data-zh="现在">Now</span><span data-en="Founder &amp; CEO" data-zh="创始人 &amp; CEO">Founder &amp; CEO</span><span class="jarrow" aria-hidden="true">→</span></p>
+          <p class="jmeta"><span class="jidx">07</span><i aria-hidden="true"></i><span class="jtag" data-en="Cofounder &amp; CMO" data-zh="联合创始人 &amp; CMO">Cofounder &amp; CMO</span></p>
+          <h3 class="jorg">sparkco</h3>
+          <p class="jreg" data-en="Graduated and moved straight to the Bay Area — building full-time." data-zh="从布朗毕业后直接搬到湾区，全职创业。">Graduated and moved straight to the Bay Area — building full-time.</p>
         </article>
-      </div>
+        <article class="jrow jrow-anim now" style="--i:7">
+          <span class="jnode" aria-hidden="true"></span>
+          <p class="jmeta"><span class="jidx">08</span><i aria-hidden="true"></i><span class="jtag" data-en="Founder &amp; CEO" data-zh="创始人 &amp; CEO">Founder &amp; CEO</span><span class="stamp jstamp" data-stamp data-nowstamp data-en="Now" data-zh="现在">Now</span></p>
+          <h3 class="jorg"><a class="jlink" href="https://theaigeo.com" target="_blank" rel="noopener">Aigeo<svg class="ext" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5 L8.5 3.5 M4.5 3.5 H8.5 V7.5"/></svg></a></h3>
+          <p class="jreg" data-en="Started with GEO software, grew into an AI-native MarTech company — $1M ARR, trusted by Fortune 500 companies." data-zh="从 GEO 软件起步，成长为 AI 原生的 MarTech 公司——ARR 达 $1M，获财富 500 强企业信任。">Started with GEO software, grew into an AI-native MarTech company — $1M ARR, trusted by Fortune 500 companies.</p>
+        </article>
     </div>
   </div>
 </section>
 
 <!-- ================= 04 OFF-HOURS ================= -->
-<section class="s-life" id="life" data-gnum>
-  <div class="gwrap" aria-hidden="true">
-    <div class="gnum"><span class="o">04</span><span class="f">04</span></div>
-  </div>
+<section class="s-life" id="life">
   <div class="sec-head" data-io>
-    <h2 class="kicker rv"><span class="no">Nº 04</span> <span data-en="Off-hours" data-zh="下班之后">Off-hours</span></h2>
-    <p class="life-sub rv d1" data-en="Steady core, wide range — always scouting the next adventure." data-zh="内核稳定，爱好广泛——永远在物色下一场冒险。">Steady core, wide range — always scouting the next adventure.</p>
+    <p class="kicker rv"><span class="no">Nº 04</span> <span data-en="Life" data-zh="生活">Life</span></p>
+    <h2 class="disp sec-title rv d1" data-en="Off-hours" data-zh="下班之后">Off-hours</h2>
+    <p class="life-sub rv d2" data-en="Steady core, wide range — always scouting the next adventure." data-zh="内核稳定，爱好广泛——永远在物色下一场冒险。">Steady core, wide range — always scouting the next adventure.</p>
   </div>
   <div class="sec-body">
     <figure class="globe-wrap tframe rv d1" data-io>
@@ -1127,10 +978,7 @@ body.zh .hobby .h-zh{display:block}
 </section>
 
 <!-- ================= 05 MANIFESTO ================= -->
-<section class="s-manif on-verm" id="beliefs" data-gnum>
-  <div class="gwrap" aria-hidden="true">
-    <div class="gnum"><span class="o">05</span><span class="f">05</span></div>
-  </div>
+<section class="s-manif on-verm" id="beliefs">
   <div class="manif-core">
     <h2 class="kicker manif-kick"><span class="no">Nº 05</span> <span data-en="What I believe" data-zh="我相信">What I believe</span></h2>
     <div class="mlines">
@@ -1151,12 +999,9 @@ body.zh .hobby .h-zh{display:block}
 </section>
 
 <!-- ================= 05 COLOPHON / CONTACT ================= -->
-<section id="contact" data-gnum>
-  <div class="gwrap" aria-hidden="true">
-    <div class="gnum"><span class="o">06</span><span class="f">06</span></div>
-  </div>
+<section id="contact">
   <div class="sec-head" data-io>
-    <p class="kicker rv"><span class="no">Nº 06</span> <span data-en="Colophon" data-zh="版权页">Colophon</span></p>
+    <p class="kicker rv"><span class="no">Nº 06</span> <span data-en="Contact" data-zh="联系">Contact</span></p>
     <h2 class="disp contact-cta rv d1" data-en="Let's open a door." data-zh="交个朋友。">Let's open a door.</h2>
     <p class="contact-line rv d2" data-en="Want your brand found — by AI, by search, by the right room? Or just here to talk product, investing, or the best noodle bar in 20+ countries — my inbox is open." data-zh="想让品牌被 AI 推荐、被搜索找到、被对的人记住？或者聊产品、聊投资，争论 20+ 个国家里哪碗面最好吃——随时来信。">Want your brand found — by AI, by search, by the right room? Or just here to talk product, investing, or the best noodle bar in 20+ countries — my inbox is open.</p>
   </div>
@@ -1174,6 +1019,7 @@ body.zh .hobby .h-zh{display:block}
       <div>
         <p><strong data-en="Reach" data-zh="联系方式">Reach</strong></p>
         <p><span data-en="LinkedIn — " data-zh="领英 — ">LinkedIn — </span><a href="https://www.linkedin.com/in/selina-huang-596136374" rel="me">www.linkedin.com/in/selina-huang-596136374</a></p>
+        <p>Aigeo — <a href="https://theaigeo.com" target="_blank" rel="noopener">theaigeo.com</a></p>
         <p><span data-en="Phone — " data-zh="电话 — ">Phone — </span><a href="tel:+16174703131">+1 617 470 3131</a> <span aria-hidden="true">·</span> <a href="tel:+8613880163758">+86 138 8016 3758</a></p>
         <p><span data-en="WeChat — " data-zh="微信 — ">WeChat — </span><span class="mono">beniceandworkhard</span></p>
         <p data-en="Location — San Francisco Bay Area" data-zh="坐标 — 旧金山湾区">Location — San Francisco Bay Area</p>
@@ -1328,9 +1174,6 @@ window.addEventListener('resize',function(){ marquees.forEach(function(m){ m.mea
 
 /* ============ rAF scroll loop ============ */
 var pbar=$('#pbar');
-var gsecs=$$('[data-gnum]').map(function(sec){
-  return {sec:sec,num:$('.gnum',sec)};
-});
 var mlines=$$('.mline');
 var lastY=window.scrollY, vel=0;
 
@@ -1345,12 +1188,6 @@ function frame(){
   pbar.style.transform='scaleX('+(dh>0?clamp(y/dh,0,1):0)+')';
 
   if(!RM){
-    /* ghost numeral fills */
-    gsecs.forEach(function(g){
-      var r=g.sec.getBoundingClientRect();
-      var p=clamp((vh-r.top)/(r.height+vh*0.4),0,1);
-      g.num.style.setProperty('--p',p.toFixed(4));
-    });
     /* manifesto scroll-scrubbed ink fill */
     mlines.forEach(function(l){
       var r=l.getBoundingClientRect();
@@ -1366,7 +1203,6 @@ function frame(){
 }
 if(RM){
   /* static end states */
-  gsecs.forEach(function(g){ g.num.style.setProperty('--p',1); });
   mlines.forEach(function(l){ l.style.setProperty('--fill',1); });
   $$('.stamp[data-stamp]:not(.copied-stamp)').forEach(function(s){ s.classList.add('hit'); });
   /* keep the progress rule only */
