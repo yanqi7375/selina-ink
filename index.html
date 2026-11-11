@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Selina Huang — Founder &amp; CEO, ClawMatrix</title>
-<meta name="description" content="Selina Huang — Founder &amp; CEO of ClawMatrix, the first platform where getting paid for who you know is automatic. Trust is the only moat in the AI era. 20+ countries, Brown × Harvard. San Francisco Bay Area.">
-<meta property="og:title" content="Selina Huang — Founder &amp; CEO, ClawMatrix">
-<meta property="og:description" content="Trust is the only moat in the AI era. ClawMatrix turns your network into income — automatically.">
+<title>Selina Huang — Founder &amp; CEO, Aigeo</title>
+<meta name="description" content="Selina Huang — serial founder; Founder &amp; CEO of Aigeo, a full-service marketing company: GEO, SEO, social media, PR and Silicon Valley events. 20+ countries, Brown × Harvard. San Francisco Bay Area.">
+<meta property="og:title" content="Selina Huang — Founder &amp; CEO, Aigeo">
+<meta property="og:description" content="Serial founder. Aigeo — full-service marketing, from AI answers to the room: GEO, SEO, social, PR and Silicon Valley events.">
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="Selina Huang">
 <meta name="twitter:card" content="summary">
@@ -263,120 +263,52 @@ html.js [data-io].in .rv.d3{transition-delay:.24s}
 .sec-body{padding:0 var(--gutter) var(--s6);position:relative;z-index:1}
 
 /* ============================================================
-   01 — CLAWMATRIX (ink panel)
+   01 — NOW: AIGEO (ink panel)
    ============================================================ */
-.s-claw{background:var(--ink);color:var(--paper)}
-.s-claw .hair{background:rgba(244,241,234,.25)}
-.claw-head{
-  font-size:clamp(3rem,9vw,8rem);line-height:.9;margin-top:var(--s3);
-}
-.claw-head .red{color:var(--verm)}
-.claw-sub{
+.s-now{background:var(--ink);color:var(--paper)}
+.now-head{font-size:clamp(3rem,9vw,8rem);line-height:.9;margin-top:var(--s3)}
+.now-head .red{color:var(--verm)}
+.now-sub{
   font-family:var(--font-d);font-weight:900;font-synthesis:none;text-transform:uppercase;
   font-size:clamp(1.05rem,2.6vw,1.75rem);line-height:1.15;margin-top:var(--s3);color:var(--paper);
 }
-.claw-sub .zh-bit{color:var(--verm)}
-.claw-dek{max-width:62ch;margin-top:var(--s3);font-size:1.125rem;color:rgba(244,241,234,.92)}
+.now-sub .hl{color:var(--verm)}
+.now-dek{max-width:62ch;margin-top:var(--s3);font-size:1.125rem;color:rgba(244,241,234,.92)}
 
-.spec{margin-top:var(--s5)}
-.spec-title{margin-bottom:var(--s3);color:rgba(244,241,234,.75)}
-.spec-title .no{color:var(--verm)}
-
-/* the API call, as it runs */
-.api-card{
-  font-family:ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace;
-  font-size:clamp(.75rem,1.7vw,1rem);line-height:1.95;
-  color:rgba(244,241,234,.85);
-  border:1px solid rgba(244,241,234,.25);
-  padding:clamp(1.25rem,3vw,2rem) clamp(1.25rem,3.5vw,2.5rem);
-  overflow-x:auto;
+/* service range: AI & search -> in the room */
+.svc-wrap{margin-top:var(--s5)}
+.svc-rail{
+  display:flex;align-items:center;gap:1rem;margin-bottom:var(--s3);
+  font-weight:700;font-size:.6875rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,241,234,.7);
 }
-.api-card .ak,.api-card .aok{color:var(--verm);font-weight:700}
-.api-card .av{color:#7c86e8}
-.clauses{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  border:1px solid rgba(244,241,234,.25);
+.svc-rail span{flex:none}
+.svc-rail span:last-child{color:var(--verm)}
+.svc-rail i{
+  flex:1;height:1px;background:rgba(244,241,234,.4);position:relative;
+  transform-origin:left;transform:scaleX(0);transition:transform 1.1s var(--ease-out) .15s;
 }
-.clause{
-  padding:var(--s3);border-right:1px solid rgba(244,241,234,.25);border-bottom:1px solid rgba(244,241,234,.25);
-  min-height:11rem;display:flex;flex-direction:column;gap:.8rem;
+.svc-rail i::after{
+  content:"";position:absolute;right:1px;top:50%;width:8px;height:8px;
+  border-top:1.5px solid var(--verm);border-right:1.5px solid var(--verm);transform:translateY(-50%) rotate(45deg);
 }
-.clause:nth-child(3n){border-right:none}
-.clause:nth-last-child(-n+2){border-bottom:none}
-html.js .clauses .clause{opacity:0}
-@keyframes clauseStamp{
-  0%{opacity:0;transform:scale(1.12) rotate(-2deg)}
-  70%{opacity:1;transform:scale(.995) rotate(0deg)}
-  85%{transform:translateY(1px)}
-  100%{opacity:1;transform:none}
+.svc-wrap.in .svc-rail i,html:not(.js) .svc-rail i{transform:scaleX(1)}
+.svc{
+  list-style:none;display:grid;grid-template-columns:repeat(5,1fr);
+  gap:1px;background:rgba(244,241,234,.22);border:1px solid rgba(244,241,234,.22);
 }
-html.js .clauses.in .clause{animation:clauseStamp .35s var(--ease-stamp) forwards;animation-delay:calc(var(--i) * 120ms)}
-.clause-no{
-  font-family:var(--font-d);font-weight:900;font-synthesis:none;
-  font-size:.75rem;letter-spacing:.2em;color:var(--verm);
+.svc-i{
+  background:var(--ink);padding:clamp(1rem,2.2vw,1.6rem);
+  display:grid;grid-template-columns:1fr auto;align-content:start;gap:.35em .5em;
 }
-.clause-t{
-  font-family:var(--font-d);font-weight:900;font-synthesis:none;text-transform:uppercase;
-  font-size:1.125rem;line-height:1.15;
+.svc-i:hover{background:#1a1918}
+.svc-i .h-ic{grid-column:1/-1;width:min(110px,72%);margin-bottom:.5em}
+.svc-t{
+  grid-column:1;grid-row:2;font-family:var(--font-d);font-weight:900;font-synthesis:none;text-transform:uppercase;
+  font-size:clamp(1.1rem,1.9vw,1.5rem);line-height:1.1;letter-spacing:.01em;
 }
-.clause p{font-size:.9375rem;line-height:1.55;color:rgba(244,241,234,.85)}
-
-/* red-pen strikethroughs */
-.negate{
-  margin-top:var(--s5);font-family:var(--font-d);font-weight:900;font-synthesis:none;
-  text-transform:uppercase;font-size:clamp(1.25rem,3.4vw,2.25rem);line-height:1.5;max-width:24em;
-}
-.strike{position:relative;display:inline-block;white-space:nowrap}
-.strike > svg{
-  position:absolute;left:-2%;top:50%;width:104%;height:.7em;transform:translateY(-50%);
-  overflow:visible;pointer-events:none;
-}
-.strike > svg path{
-  fill:none;stroke:var(--verm);stroke-width:4;stroke-linecap:round;vector-effect:non-scaling-stroke;
-  stroke-dasharray:1;stroke-dashoffset:1;
-}
-.negate.in .strike > svg path{transition:stroke-dashoffset .55s var(--ease-out);stroke-dashoffset:0}
-.negate.in .strike.s2 > svg path{transition-delay:.5s}
-html:not(.js) .strike > svg path{stroke-dashoffset:0}
-.rm-stamp{
-  position:absolute;right:-.5em;top:-1.5em;font-family:var(--font-b);
-  font-size:.5em;letter-spacing:.14em;padding:.2em .5em;border-width:2px;
-  transform:rotate(6deg);
-}
-.negate.in .strike:nth-of-type(1) .rm-stamp{animation-delay:.6s}
-.negate.in .strike.s2 .rm-stamp{animation-delay:1.15s}
-
-/* human-call flow scrub stage */
-.flow-stage{height:220vh;margin-top:var(--s5)}
-.flow-sticky{
-  position:sticky;top:calc(var(--mast-h) + 2vh);
-  min-height:calc(96vh - var(--mast-h));display:flex;flex-direction:column;justify-content:center;gap:var(--s3);
-}
-.flow-kick{color:rgba(244,241,234,.7)}
-.flow-kick .no{color:#8B96FF}
-.flow-svg{width:100%;height:auto;display:block}
-.flow-svg .fl{
-  fill:none;stroke:var(--blue);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;
-  vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:1;
-}
-.flow-svg .flb{
-  font-family:var(--font-b);font-weight:700;letter-spacing:.12em;text-transform:uppercase;
-  fill:var(--paper);opacity:0;
-}
-.flow-svg .flb.bl{fill:#7c86e8}
-html:not(.js) .flow-svg .fl{stroke-dashoffset:0}
-html:not(.js) .flow-svg .flb{opacity:1}
-/* mobile variant: small decorative loop (no scroll scrub on touch) */
-.flow-svg-m{display:none;width:min(260px,72%);margin:.25rem auto 0}
-.flow-svg-m .fl{stroke-dashoffset:0}
-.flow-svg-m .fm-flow{stroke-dasharray:.09 .06;animation:fmFlow 2.2s linear infinite}
-@keyframes fmFlow{to{stroke-dashoffset:-.3}}
-.fm-n1,.fm-n2,.fm-n3{animation:fmPulse 2.4s ease-in-out infinite}
-.fm-n2{animation-delay:.5s}
-.fm-n3{animation-delay:1.1s}
-@keyframes fmPulse{50%{opacity:.3}}
-.fm-coin{animation:fmPulse 2.4s ease-in-out infinite;animation-delay:1.6s}
-.flow-hint{font-size:.6875rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,241,234,.45)}
+.svc-no{grid-column:2;grid-row:2;align-self:center;font-weight:700;font-size:.6875rem;letter-spacing:.18em;color:var(--verm)}
+.svc-d{grid-column:1/-1;grid-row:3;font-size:.9375rem;line-height:1.5;color:rgba(244,241,234,.78)}
+.svc-i:hover .svc-t{color:var(--verm)}
 
 /* ============================================================
    02 — TRACTION LEDGER (paper)
@@ -795,6 +727,27 @@ body.zh .hobby .h-zh{display:block}
 .an-eq .b3{animation-delay:.36s}
 .an-eq .b4{animation-delay:.54s}
 @keyframes icDotTw{0%,100%{opacity:.2}50%{opacity:.9}}
+.h-ic .verm-s{stroke:var(--verm)}
+@keyframes icType{0%{stroke-dashoffset:1}30%,80%{stroke-dashoffset:0}100%{stroke-dashoffset:1}}
+.an-type{stroke-dasharray:1;stroke-dashoffset:1;animation:icType 3.2s var(--ease-out) infinite}
+.an-type.t2{animation-delay:.35s}
+.an-type.t3{animation-delay:.7s}
+@keyframes icRank{0%,15%{transform:translateY(0)}55%,85%{transform:translateY(-36px)}100%{transform:translateY(0)}}
+.an-rank{animation:icRank 3.2s var(--ease-out) infinite}
+@keyframes icHeart{0%{opacity:0;transform:translateY(6px) scale(.6)}25%{opacity:1;transform:translateY(0) scale(1)}100%{opacity:0;transform:translateY(-28px) scale(.9)}}
+.an-heart{transform-box:fill-box;transform-origin:center;animation:icHeart 2.4s ease-out infinite}
+.an-heart.h2{animation-delay:1.2s}
+@keyframes icWave{0%,100%{opacity:.15}30%{opacity:1}}
+.an-wave{animation:icWave 1.6s ease-in-out infinite}
+.an-wave.w2{animation-delay:.2s}
+.an-wave.w3{animation-delay:.4s}
+@keyframes icSpot{0%,100%{opacity:.25}50%{opacity:.7}}
+.h-ic .an-spot{animation:icSpot 2.6s ease-in-out infinite}
+@keyframes icBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.an-bob{animation:icBob .9s ease-in-out infinite}
+.an-bob.b2{animation-delay:.15s}
+.an-bob.b3{animation-delay:.3s}
+.an-bob.b4{animation-delay:.45s}
 .h-ic .dot{fill:currentColor;stroke:none;animation:icDotTw 2s ease-in-out infinite}
 .h-ic .dot.d2{animation-delay:1s}
 
@@ -803,11 +756,11 @@ body.zh .hobby .h-zh{display:block}
    ============================================================ */
 @media (max-width:960px){
   .mast-date{display:none}
-  .clauses{grid-template-columns:repeat(2,1fr)}
-  .clause:nth-child(3n){border-right:1px solid rgba(244,241,234,.25)}
-  .clause:nth-child(2n){border-right:none}
-  .clause:nth-last-child(-n+2){border-bottom:1px solid rgba(244,241,234,.25)}
-  .clause:last-child{border-bottom:none}
+}
+@media (max-width:1100px) and (min-width:721px){
+  .svc{grid-template-columns:repeat(6,1fr)}
+  .svc-i{grid-column:span 2}
+  .svc-i:nth-child(n+4){grid-column:span 3}
 }
 @media (max-width:720px){
   :root{--mast-h:59px}
@@ -815,9 +768,13 @@ body.zh .hobby .h-zh{display:block}
   .mast-name{font-size:.75rem;letter-spacing:.08em}
   .mast-nav{gap:.3rem}
   .mast-nav a{font-size:.6875rem;padding:.3em .05em}
-  .clauses{grid-template-columns:1fr}
-  .clause{border-right:none !important;min-height:0}
-  .clause:last-child{border-bottom:none}
+  .svc{grid-template-columns:1fr}
+  .svc-i{grid-template-columns:64px 1fr auto;column-gap:1rem;align-items:center}
+  .svc-i .h-ic{grid-column:1;grid-row:1 / span 2;width:64px;margin:0}
+  .svc-t{grid-column:2;grid-row:1}
+  .svc-no{grid-column:3;grid-row:1}
+  .svc-d{grid-column:2 / -1;grid-row:2}
+  .svc-rail{font-size:.625rem;letter-spacing:.12em}
   .vlabel{display:none}
   .j-layout{grid-template-columns:1fr}
   .j-rail{display:none}
@@ -840,16 +797,6 @@ body.zh .hobby .h-zh{display:block}
   .globe-wrap{grid-template-columns:1fr}
   .globe-cap{text-align:center}
   .globe-read{border-top:none;padding-top:0}
-  .flow-stage{height:auto}
-  .flow-sticky{position:static;min-height:0}
-  #flowSvg{display:none}
-  .flow-svg-m{display:block}
-  .flow-hint{display:none}
-}
-/* short viewports (landscape phones, small desktop windows): un-pin the diagram */
-@media (max-height:560px){
-  .flow-stage{height:auto}
-  .flow-sticky{position:static;min-height:0}
 }
 
 /* ============================================================
@@ -864,7 +811,6 @@ body.zh .hobby .h-zh{display:block}
   .mq-track{transform:none !important}
   .scue svg{animation:none}
   html.js .hline > span{transform:none}
-  html.js .clauses .clause{opacity:1;animation:none}
   html.js .stamp[data-stamp]{animation:none}
   html.js .stamp[data-stamp].hit{opacity:1}
   html.js [data-io] .rv{opacity:1;transform:none}
@@ -872,14 +818,11 @@ body.zh .hobby .h-zh{display:block}
   .hair{transform:none}
   .uscore{transform:none}
   .ret-dots i{background:var(--verm);animation:none}
-  .uline path,.strike > svg path,.flow-svg .fl{stroke-dashoffset:0 !important}
-  .flow-svg .flb{opacity:1 !important}
+  .uline path,.an-type,.an-trail{stroke-dashoffset:0 !important}
   .gnum .f{clip-path:none}
   .mline .mf{clip-path:none}
-  .flow-stage{height:auto}
-  .flow-sticky{position:static;min-height:0}
   .h-ic *{animation:none !important;offset-distance:60% !important}
-  .flow-svg-m *{animation:none !important}
+  .h-ic .an-heart{opacity:1}
 }
 </style>
 </head>
@@ -893,7 +836,7 @@ body.zh .hobby .h-zh{display:block}
     <a class="mast-name" href="#top">Selina Huang</a>
     <p class="mast-date" data-en="Founder &amp; CEO — San Francisco Bay Area" data-zh="创始人 &amp; CEO — 旧金山湾区">Founder &amp; CEO — San Francisco Bay Area</p>
     <nav class="mast-nav" data-en-aria="Section navigation" data-zh-aria="页面导航" aria-label="Section navigation">
-      <a href="#now" data-en-aria="01 — Now: ClawMatrix" data-zh-aria="01 — 现在：ClawMatrix" aria-label="01 — Now: ClawMatrix">01</a>
+      <a href="#now" data-en-aria="01 — Now: Aigeo" data-zh-aria="01 — 现在：Aigeo" aria-label="01 — Now: Aigeo">01</a>
       <a href="#ledger" data-en-aria="02 — The personal ledger" data-zh-aria="02 — 个人账本" aria-label="02 — The personal ledger">02</a>
       <a href="#journey" data-en-aria="03 — Journey" data-zh-aria="03 — 一路走来" aria-label="03 — Journey">03</a>
       <a href="#life" data-en-aria="04 — Off-hours" data-zh-aria="04 — 下班之后" aria-label="04 — Off-hours">04</a>
@@ -909,15 +852,14 @@ body.zh .hobby .h-zh{display:block}
 <!-- ================= HERO ================= -->
 <section class="hero" id="top" data-en-aria="Cover" data-zh-aria="封面" aria-label="Cover">
   <div class="hero-ghost" aria-hidden="true" data-en="@" data-zh="介">@</div>
-  <p class="kicker hero-kick"><span class="no">Nº 00</span> <span data-en="Trust is the only moat in the AI era" data-zh="AI 时代，信任是唯一的护城河">Trust is the only moat in the AI era</span></p>
+  <p class="kicker hero-kick"><span class="no">Nº 00</span> <span data-en="Marketer by trade. Founder by habit." data-zh="营销是本行，创业是习惯。">Marketer by trade. Founder by habit.</span></p>
   <h1 class="hero-name" data-en-aria="Selina Huang" data-zh-aria="Selina Huang" aria-label="Selina Huang">
     <span class="hline l1" aria-hidden="true"><span>Selina</span></span>
     <span class="hline l2 outline" aria-hidden="true"><span>Huang</span></span>
   </h1>
   <div class="hair hero-rule in"></div>
   <p class="hero-dek">
-    <span data-en="Serial founder. Sports addict. Amateur chef. 20+ countries deep. Now building ClawMatrix — where " data-zh="连续创业者。运动上瘾，业余大厨，去过 20+ 个国家。正在做 ClawMatrix——让">Serial founder. Sports addict. Amateur chef. 20+ countries deep. Now building ClawMatrix — where </span><span class="uline"><span data-en="your network pays you" data-zh="人脉自动变成收入">your network pays you</span><svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path d="M2 6 C 18 3, 34 8, 52 5 S 84 7, 98 4" pathLength="1"/></svg></span>
-    <span data-en=", automatically." data-zh="。">, automatically.</span>
+    <span data-en="Serial founder. Sports addict. Amateur chef. 20+ countries deep. Now running Aigeo — " data-zh="连续创业者。运动上瘾，业余大厨，去过 20+ 个国家。现在专注 Aigeo——">Serial founder. Sports addict. Amateur chef. 20+ countries deep. Now running Aigeo — </span><span class="uline"><span data-en="full-service marketing" data-zh="全案营销">full-service marketing</span><svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path d="M2 6 C 18 3, 34 8, 52 5 S 84 7, 98 4" pathLength="1"/></svg></span><span data-en=", from AI search to Silicon Valley events." data-zh="，从 AI 搜索做到硅谷线下活动。">, from AI search to Silicon Valley events.</span>
   </p>
   <div class="hero-foot">
     <div class="issue">
@@ -934,85 +876,48 @@ body.zh .hobby .h-zh{display:block}
   <div class="vlabel" aria-hidden="true" data-en="Founder &amp; CEO" data-zh="创始人 &amp; CEO">Founder &amp; CEO</div>
 </section>
 
-<!-- ================= 01 CLAWMATRIX ================= -->
-<section class="s-claw on-ink" id="now" data-gnum>
+<!-- ================= 01 NOW: AIGEO ================= -->
+<section class="s-now on-ink" id="now" data-gnum>
   <div class="gwrap" aria-hidden="true">
     <div class="gnum"><span class="o">01</span><span class="f">01</span></div>
   </div>
   <div class="sec-head" data-io>
-    <p class="kicker rv"><span class="no">Nº 01</span> <span data-en="Now building" data-zh="正在进行">Now building</span></p>
-    <h2 class="disp claw-head rv d1"><span class="red">Claw</span><br>Matrix</h2>
-    <p class="claw-sub rv d2"><span data-en="Getting paid for who you know — " data-zh="认识谁，就能赚到钱——">Getting paid for who you know — </span><span class="zh-bit" data-en="automatic" data-zh="全自动">automatic</span><span data-en="." data-zh="。">.</span></p>
-    <p class="claw-dek rv d3" data-en="Trust is the only moat left in the AI era — and ClawMatrix is the system built to win it. It turns your network into income: the first platform where getting paid for who you know happens automatically. Three months in: $100K+ ARR, trusted by Fortune 500 and publicly listed companies." data-zh="AI 时代，信任是仅存的护城河——ClawMatrix 就是为拿下它而造的系统。它把人脉变成收入：第一个让「认识谁」自动变现的平台。上线三个月：ARR 突破 $100K，获财富 500 强及多家上市公司信任。">Trust is the only moat left in the AI era — and ClawMatrix is the system built to win it. It turns your network into income: the first platform where getting paid for who you know happens automatically. Three months in: $100K+ ARR, trusted by Fortune 500 and publicly listed companies.</p>
+    <p class="kicker rv"><span class="no">Nº 01</span> <span data-en="Now" data-zh="现在">Now</span></p>
+    <h2 class="disp now-head rv d1"><span class="red">Ai</span>geo</h2>
+    <p class="now-sub rv d2"><span data-en="Full-service marketing — " data-zh="全案营销——">Full-service marketing — </span><span class="hl" data-en="from AI answers to the room" data-zh="从 AI 回答，到线下现场">from AI answers to the room</span><span data-en="." data-zh="。">.</span></p>
+    <p class="now-dek rv d3" data-en="Aigeo is a full-service marketing company. One team covers the whole range — GEO, SEO, social media promotion, PR, and in-person events in Silicon Valley — so a brand gets named by AI, found in search, talked about online, covered by the press, and met face to face." data-zh="Aigeo 是一家全案营销公司。一支团队覆盖全链路——GEO、SEO、社媒推广、PR，以及在硅谷举办的线下活动——让品牌被 AI 推荐、被搜索找到、在社媒上被讨论、被媒体报道，也被人当面记住。">Aigeo is a full-service marketing company. One team covers the whole range — GEO, SEO, social media promotion, PR, and in-person events in Silicon Valley — so a brand gets named by AI, found in search, talked about online, covered by the press, and met face to face.</p>
   </div>
 
   <div class="sec-body">
-    <div class="spec" data-io>
-      <p class="kicker spec-title"><span class="no">API</span> <span data-en="One call, one human, one payout" data-zh="一次调用，一个真人，一笔报酬">One call, one human, one payout</span></p>
-      <pre class="api-card tframe rv"><code><span class="ak">POST</span> /v1/humans/call
-{
-  "need":   <span class="av" data-en='"close the deal in Shanghai"' data-zh='"把上海这一单谈成"'>"close the deal in Shanghai"</span>,
-  "skills": <span class="av" data-en='["mandarin", "negotiation"]' data-zh='["中文", "会谈判"]'>["mandarin", "negotiation"]</span>,
-  "pay":    <span class="av" data-en='"on results only"' data-zh='"只按结果付费"'>"on results only"</span>
-}
-<span class="aok">→ 200 OK</span> <span data-en="· human matched · on it" data-zh="· 真人已接单 · 办事中">· human matched · on it</span></code></pre>
-    </div>
-
-    <p class="negate" data-io>
-      <span data-en="An agent can think, write, plan — " data-zh="agent 能思考、能写、能规划——">An agent can think, write, plan — </span><span class="strike"><span data-en="do everything" data-zh="包办一切">do everything</span><svg viewBox="0 0 100 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 C 20 4, 36 9, 52 6 S 82 8, 98 5" pathLength="1"/></svg><span class="stamp rm-stamp" data-stamp aria-hidden="true" data-en="Almost" data-zh="差一点">Almost</span></span><span data-en="." data-zh="。">.</span><br>
-      <span data-en="It still can't shake a hand." data-zh="它还是不会握手。">It still can't shake a hand.</span><br>
-      <span data-en="That's where people come in — and get paid for it." data-zh="这就轮到真人出场——顺便把钱赚了。">That's where people come in — and get paid for it.</span>
-    </p>
-
-    <!-- scroll-scrubbed human-call diagram (blue pencil) -->
-    <div class="flow-stage" id="flowStage">
-      <div class="flow-sticky">
-        <p class="kicker flow-kick"><span class="no">Fig. 1</span> <span data-en="How your network becomes income" data-zh="人脉如何变成收入">How your network becomes income</span></p>
-        <svg class="flow-svg" id="flowSvg" viewBox="0 0 960 340" role="img" data-en-aria="Diagram: your agent scans your connections, matches them against company and individual needs, you approve, the agent makes the warm intro, and when the deal closes the platform pays the agents." data-zh-aria="示意图：agent 扫描你的人脉，匹配企业或个人的需求，本人批准后由 agent 完成温暖引荐，成交后平台向 agent 发钱。" aria-label="Diagram: your agent scans your connections, matches them against company and individual needs, you approve, the agent makes the warm intro, and when the deal closes the platform pays the agents.">
-          <!-- 1. scan network -->
-          <circle class="fl" data-fl="0,.1" cx="52" cy="150" r="9" pathLength="1"/>
-          <circle class="fl" data-fl=".03,.13" cx="96" cy="128" r="9" pathLength="1"/>
-          <circle class="fl" data-fl=".06,.16" cx="88" cy="196" r="9" pathLength="1"/>
-          <path class="fl" data-fl=".05,.15" d="M60 145 L 88 133 M96 137 L 90 187 M60 156 L 80 191" pathLength="1"/>
-          <path class="fl" data-fl=".08,.2" d="M20 110 a80 80 0 0 1 110 -8" pathLength="1"/>
-          <text class="flb" data-fl="0,.18" x="90" y="248" text-anchor="middle" font-size="13" data-en="Scans your network" data-zh="扫描你的人脉">Scans your network</text>
-          <!-- arrow -->
-          <path class="fl" data-fl=".16,.24" d="M150 162 L 208 162 M208 162 l-11 -6 M208 162 l-11 6" pathLength="1"/>
-          <!-- 2. match needs -->
-          <rect class="fl" data-fl=".22,.34" x="222" y="118" width="128" height="88" pathLength="1"/>
-          <path class="fl" data-fl=".26,.38" d="M240 142 H 332 M240 162 H 332 M240 182 H 306" pathLength="1"/>
-          <text class="flb" data-fl=".24,.4" x="286" y="248" text-anchor="middle" font-size="13" data-en="Matches a real need" data-zh="匹配企业 / 个人需求">Matches a real need</text>
-          <!-- arrow -->
-          <path class="fl" data-fl=".36,.44" d="M362 162 L 420 162 M420 162 l-11 -6 M420 162 l-11 6" pathLength="1"/>
-          <!-- 3. you approve -->
-          <circle class="fl" data-fl=".42,.54" cx="472" cy="162" r="38" pathLength="1"/>
-          <path class="fl" data-fl=".48,.58" d="M456 162 l11 12 l22 -26" pathLength="1"/>
-          <text class="flb" data-fl=".44,.6" x="472" y="248" text-anchor="middle" font-size="13" data-en="You approve" data-zh="本人批准">You approve</text>
-          <!-- arrow -->
-          <path class="fl" data-fl=".54,.62" d="M522 162 L 580 162 M580 162 l-11 -6 M580 162 l-11 6" pathLength="1"/>
-          <!-- 4. warm intro -->
-          <rect class="fl" data-fl=".6,.72" x="594" y="126" width="124" height="72" pathLength="1"/>
-          <path class="fl" data-fl=".64,.76" d="M594 126 L 656 168 L 718 126" pathLength="1"/>
-          <text class="flb" data-fl=".62,.78" x="656" y="248" text-anchor="middle" font-size="13" data-en="Warm intro" data-zh="温暖引荐">Warm intro</text>
-          <!-- arrow -->
-          <path class="fl" data-fl=".72,.8" d="M730 162 L 788 162 M788 162 l-11 -6 M788 162 l-11 6" pathLength="1"/>
-          <!-- 5. deal closed, platform pays -->
-          <circle class="fl" data-fl=".78,.9" cx="854" cy="162" r="40" pathLength="1"/>
-          <path class="fl" data-fl=".84,.96" d="M854 140 v44 M842 150 h18 a8 8 0 0 1 0 16 h-12 a8 8 0 0 0 0 16 h18" pathLength="1"/>
-          <path class="fl" data-fl=".88,1" d="M905 120 l10 10 l18 -22" pathLength="1"/>
-          <text class="flb" data-fl=".8,1" x="950" y="248" text-anchor="end" font-size="13" data-en="Deal closes · agents get paid" data-zh="成交 · 平台向 agent 发钱">Deal closes · agents get paid</text>
-        </svg>
-        <svg class="flow-svg flow-svg-m" viewBox="0 0 360 120" aria-hidden="true">
-          <circle class="fl fm-n1" cx="40" cy="60" r="8"/>
-          <circle class="fl fm-n2" cx="78" cy="36" r="8"/>
-          <circle class="fl fm-n3" cx="74" cy="86" r="8"/>
-          <path class="fl" d="M47 55 L 70 41 M78 45 L 75 77 M48 66 L 66 81"/>
-          <path class="fl fm-flow" d="M92 60 C 150 16, 210 104, 268 60" pathLength="1"/>
-          <circle class="fl fm-coin" cx="302" cy="60" r="24"/>
-          <path class="fl" d="M302 46 v28 M294 52 h11 a6 6 0 0 1 0 12 h-8 a6 6 0 0 0 0 12 h13"/>
-        </svg>
-        <p class="flow-hint" data-en="Scroll to draw — scroll up to un-draw" data-zh="向下滚动，边滚边画；向上滚动，画了又擦">Scroll to draw — scroll up to un-draw</p>
-      </div>
+    <div class="svc-wrap" data-io>
+      <p class="svc-rail" aria-hidden="true"><span data-en="AI &amp; search" data-zh="AI 与搜索">AI &amp; search</span><i></i><span data-en="In the room" data-zh="线下现场">In the room</span></p>
+      <ol class="svc">
+        <li class="svc-i rv">
+          <svg class="h-ic" viewBox="0 0 80 56" aria-hidden="true"><path d="M14 6 H66 a6 6 0 0 1 6 6 V32 a6 6 0 0 1 -6 6 H32 L22 47 V38 H14 a6 6 0 0 1 -6 -6 V12 a6 6 0 0 1 6 -6 Z"/><path class="an-type verm-s" d="M18 16 H44" pathLength="1"/><path class="an-type t2 thin" d="M18 23 H62" pathLength="1"/><path class="an-type t3 thin" d="M18 30 H52" pathLength="1"/></svg>
+          <h3 class="svc-t">GEO</h3><span class="svc-no mono" aria-hidden="true">01</span>
+          <p class="svc-d" data-en="Named in AI answers — ChatGPT, Gemini, Perplexity." data-zh="出现在 ChatGPT、Gemini、Perplexity 的回答里。">Named in AI answers — ChatGPT, Gemini, Perplexity.</p>
+        </li>
+        <li class="svc-i rv" style="transition-delay:.06s">
+          <svg class="h-ic" viewBox="0 0 80 56" aria-hidden="true"><path class="thin" d="M8 12 H40 M8 24 H40 M8 36 H40 M8 48 H40"/><rect class="an-rank verm-f" x="6" y="45" width="36" height="6" rx="1"/><circle cx="58" cy="24" r="10"/><path d="M65 31 L74 40"/></svg>
+          <h3 class="svc-t">SEO</h3><span class="svc-no mono" aria-hidden="true">02</span>
+          <p class="svc-d" data-en="Found where people still search." data-zh="在搜索引擎里被找到。">Found where people still search.</p>
+        </li>
+        <li class="svc-i rv" style="transition-delay:.12s">
+          <svg class="h-ic" viewBox="0 0 80 56" aria-hidden="true"><rect x="22" y="5" width="26" height="46" rx="4"/><path class="thin" d="M30 44 H40"/><g transform="translate(60 40)"><path class="an-heart verm-f" d="M0 8 L-5.6 2.4 A3.5 3.5 0 0 1 0 -1.6 A3.5 3.5 0 0 1 5.6 2.4 Z"/></g><g transform="translate(68 30)"><path class="an-heart h2 verm-f" d="M0 8 L-5.6 2.4 A3.5 3.5 0 0 1 0 -1.6 A3.5 3.5 0 0 1 5.6 2.4 Z"/></g></svg>
+          <h3 class="svc-t" data-en="Social" data-zh="社媒推广">Social</h3><span class="svc-no mono" aria-hidden="true">03</span>
+          <p class="svc-d" data-en="Promotion where attention lives." data-zh="在注意力聚集的地方做推广。">Promotion where attention lives.</p>
+        </li>
+        <li class="svc-i rv" style="transition-delay:.18s">
+          <svg class="h-ic" viewBox="0 0 80 56" aria-hidden="true"><path d="M10 22 H20 L44 10 V46 L20 34 H10 Z"/><path d="M18 34 L22 46 H28 L25 35"/><path class="an-wave" d="M52 22 q4 6 0 12"/><path class="an-wave w2" d="M58 17 q7 11 0 22"/><path class="an-wave w3 verm-s" d="M64 12 q10 16 0 32"/></svg>
+          <h3 class="svc-t">PR</h3><span class="svc-no mono" aria-hidden="true">04</span>
+          <p class="svc-d" data-en="Stories the press wants to cover." data-zh="讲出媒体愿意报道的故事。">Stories the press wants to cover.</p>
+        </li>
+        <li class="svc-i rv" style="transition-delay:.24s">
+          <svg class="h-ic" viewBox="0 0 80 56" aria-hidden="true"><path class="thin an-spot" d="M40 2 L26 38 M40 2 L54 38"/><circle class="verm-f" cx="40" cy="25" r="3.2"/><path d="M40 30 V37"/><path d="M16 38 H64"/><circle class="an-bob" cx="22" cy="48" r="3"/><circle class="an-bob b2" cx="34" cy="50" r="3"/><circle class="an-bob b3" cx="46" cy="50" r="3"/><circle class="an-bob b4" cx="58" cy="48" r="3"/></svg>
+          <h3 class="svc-t" data-en="Events" data-zh="线下活动">Events</h3><span class="svc-no mono" aria-hidden="true">05</span>
+          <p class="svc-d" data-en="In-person events, hosted in Silicon Valley." data-zh="在硅谷举办的线下活动。">In-person events, hosted in Silicon Valley.</p>
+        </li>
+      </ol>
     </div>
   </div>
 </section>
@@ -1027,9 +932,9 @@ body.zh .hobby .h-zh{display:block}
   </div>
   <div class="sec-body">
     <ul class="doss" data-io>
-      <li class="rv" style="transition-delay:.0s"><span class="d-m mono" aria-hidden="true">▸</span><span data-en="Silicon Valley AI founder — Aigeo &amp; ClawMatrix" data-zh="硅谷 AI 创业者 — Aigeo &amp; ClawMatrix 创始人">Silicon Valley AI founder — Aigeo &amp; ClawMatrix</span></li>
+      <li class="rv" style="transition-delay:.0s"><span class="d-m mono" aria-hidden="true">▸</span><span data-en="Silicon Valley founder — Founder &amp; CEO of Aigeo" data-zh="硅谷创业者 — Aigeo 创始人 &amp; CEO">Silicon Valley founder — Founder &amp; CEO of Aigeo</span></li>
       <li class="rv" style="transition-delay:.05s"><span class="d-m mono" aria-hidden="true">▸</span><span data-en="Among the earliest GEO practitioners overseas — first wave to open-source the methodology" data-zh="海外 GEO 赛道最早期实践者之一，首批开源方法论布道者">Among the earliest GEO practitioners overseas — first wave to open-source the methodology</span></li>
-      <li class="rv" style="transition-delay:.1s"><span class="d-m mono" aria-hidden="true">▸</span><span data-en="Committed to building next-generation A2A infrastructure" data-zh="致力于构建下一代 A2A 基础设施">Committed to building next-generation A2A infrastructure</span></li>
+      <li class="rv" style="transition-delay:.1s"><span class="d-m mono" aria-hidden="true">▸</span><span data-en="Author of Digital Marketing (Tsinghua University Press)" data-zh="《数字营销》作者（清华大学出版社）">Author of Digital Marketing (Tsinghua University Press)</span></li>
       <li class="rv" style="transition-delay:.15s"><span class="d-m mono" aria-hidden="true">▸</span><span data-en="Ex-4A agency; ex-cybersecurity consultant at a top consulting firm" data-zh="前 4A 广告公司；前头部咨询公司网络安全顾问">Ex-4A agency; ex-cybersecurity consultant at a top consulting firm</span></li>
     </ul>
     <div class="ledger">
@@ -1060,7 +965,7 @@ body.zh .hobby .h-zh{display:block}
       </div>
       <div class="hair" data-io></div>
     </div>
-    <p class="footnotes" id="fn1"><span class="dg">†</span> <span data-en="Dual bachelor's: Shanghai University × University of Technology Sydney; MPA: Brown University, 2024–2025, cross-registered at Harvard. Honors: national first prize (international-trade track) at the national business challenge; top-tier scholarship; author of Digital Marketing, published by Tsinghua University Press." data-zh="双学士：上海大学 × 悉尼科技大学；MPA：布朗大学 2024–2025，含哈佛跨校选课。获奖：商业挑战赛国际贸易组全国一等奖、特等奖学金；《数字营销》作者，清华大学出版社出版。">Dual bachelor's: Shanghai University × University of Technology Sydney; MPA: Brown University, 2024–2025, cross-registered at Harvard. Honors: national first prize (international-trade track) at the national business challenge; top-tier scholarship; author of Digital Marketing, published by Tsinghua University Press.</span></p>
+    <p class="footnotes" id="fn1"><span class="dg">†</span> <span data-en="Dual bachelor's: Shanghai University × University of Technology Sydney; MPA: Brown University, 2024–2025, cross-registered at Harvard. Honors: national first prize (international-trade track) at the national business challenge; top-tier scholarship." data-zh="双学士：上海大学 × 悉尼科技大学；MPA：布朗大学 2024–2025，含哈佛跨校选课。获奖：商业挑战赛国际贸易组全国一等奖、特等奖学金。">Dual bachelor's: Shanghai University × University of Technology Sydney; MPA: Brown University, 2024–2025, cross-registered at Harvard. Honors: national first prize (international-trade track) at the national business challenge; top-tier scholarship.</span></p>
   </div>
 </section>
 
@@ -1141,21 +1046,12 @@ body.zh .hobby .h-zh{display:block}
           </div>
           <p class="jtag"><span data-en="Cofounder &amp; CMO" data-zh="联合创始人 &amp; CMO">Cofounder &amp; CMO</span><span class="jarrow" aria-hidden="true">→</span></p>
         </article>
-        <article class="jrow jrow-anim" style="--i:11">
+        <article class="jrow jrow-anim now" style="--i:11">
           <span class="jnode" aria-hidden="true"></span>
           <p class="jidx">08</p>
           <div class="jmain">
             <h3 class="jorg">Aigeo</h3>
-            <p class="jreg"><span data-en="Make your brand the default answer — GEO across ChatGPT, Gemini and other AI engines." data-zh="让品牌成为默认答案——覆盖 ChatGPT、Gemini 等 AI 引擎的 GEO 平台。">Make your brand the default answer — GEO across ChatGPT, Gemini and other AI engines.</span><span class="lead" aria-hidden="true"></span></p>
-          </div>
-          <p class="jtag"><span data-en="Founder &amp; CEO" data-zh="创始人 &amp; CEO">Founder &amp; CEO</span><span class="jarrow" aria-hidden="true">→</span></p>
-        </article>
-        <article class="jrow jrow-anim now" style="--i:13">
-          <span class="jnode" aria-hidden="true"></span>
-          <p class="jidx">09</p>
-          <div class="jmain">
-            <h3 class="jorg">ClawMatrix</h3>
-            <p class="jreg"><span data-en="2026 — where your network pays you: trust, turned into infrastructure." data-zh="2026——让人脉自动变成收入：把信任做成基础设施。">2026 — where your network pays you: trust, turned into infrastructure.</span><span class="lead" aria-hidden="true"></span></p>
+            <p class="jreg"><span data-en="Started with GEO, grew into full-service marketing — from AI answers to the room." data-zh="从 GEO 起步，长成全案营销公司——从 AI 的回答，一路做到线下现场。">Started with GEO, grew into full-service marketing — from AI answers to the room.</span><span class="lead" aria-hidden="true"></span></p>
           </div>
           <p class="jtag"><span class="stamp" data-stamp data-nowstamp data-en="Now" data-zh="现在">Now</span><span data-en="Founder &amp; CEO" data-zh="创始人 &amp; CEO">Founder &amp; CEO</span><span class="jarrow" aria-hidden="true">→</span></p>
         </article>
@@ -1262,7 +1158,7 @@ body.zh .hobby .h-zh{display:block}
   <div class="sec-head" data-io>
     <p class="kicker rv"><span class="no">Nº 06</span> <span data-en="Colophon" data-zh="版权页">Colophon</span></p>
     <h2 class="disp contact-cta rv d1" data-en="Let's open a door." data-zh="交个朋友。">Let's open a door.</h2>
-    <p class="contact-line rv d2" data-en="Building agents that need real people? Investing, jamming on product, or debating the best noodle bar in 20+ countries — my inbox is open." data-zh="在做需要「调用真人」的 agent？聊投资、聊产品，或者争论 20+ 个国家里哪碗面最好吃——随时来信。">Building agents that need real people? Investing, jamming on product, or debating the best noodle bar in 20+ countries — my inbox is open.</p>
+    <p class="contact-line rv d2" data-en="Want your brand found — by AI, by search, by the right room? Or just here to talk product, investing, or the best noodle bar in 20+ countries — my inbox is open." data-zh="想让品牌被 AI 推荐、被搜索找到、被对的人记住？或者聊产品、聊投资，争论 20+ 个国家里哪碗面最好吃——随时来信。">Want your brand found — by AI, by search, by the right room? Or just here to talk product, investing, or the best noodle bar in 20+ countries — my inbox is open.</p>
   </div>
   <div class="sec-body" data-io>
     <div class="email-wrap rv d2">
@@ -1288,7 +1184,7 @@ body.zh .hobby .h-zh{display:block}
 </main>
 
 <footer class="foot">
-  <p class="foot-made"><span data-en="Made in the Bay Area. Powered by real humans." data-zh="湾区出品，真人驱动。">Made in the Bay Area. Powered by real humans.</span> <span data-en="© 2026 Selina Huang. All rights reserved." data-zh="© 2026 Selina Huang 保留所有权利。">© 2026 Selina Huang. All rights reserved.</span></p>
+  <p class="foot-made"><span data-en="Made in the Bay Area. Proofread in red." data-zh="湾区出品，朱笔校对。">Made in the Bay Area. Proofread in red.</span> <span data-en="© 2026 Selina Huang. All rights reserved." data-zh="© 2026 Selina Huang 保留所有权利。">© 2026 Selina Huang. All rights reserved.</span></p>
   <p class="foot-end" aria-hidden="true" data-en="End." data-zh="完">End.</p>
   <a class="foot-top" href="#top" data-en="↑ Top" data-zh="↑ 回到顶部">↑ Top</a>
   <p class="folio" aria-hidden="true">6/6</p>
@@ -1311,8 +1207,8 @@ try{ lang = localStorage.getItem(LANG_KEY)||'en'; }catch(e){}
 if(lang!=='zh') lang='en';
 
 var TITLES = {
-  en:'Selina Huang — Founder & CEO, ClawMatrix',
-  zh:'Selina Huang — ClawMatrix 创始人 & CEO'
+  en:'Selina Huang — Founder & CEO, Aigeo',
+  zh:'Selina Huang — Aigeo 创始人 & CEO'
 };
 function applyLang(l){
   document.documentElement.lang = (l==='zh')?'zh-CN':'en';
@@ -1395,12 +1291,6 @@ var io = new IntersectionObserver(function(entries){
     el.classList.add('in');
     var c=el.getAttribute('data-count');
     if(c && COUNTERS[c]) COUNTERS[c](el);
-    /* stamps inside revealed blocks (negate strikes handled by CSS delays) */
-    if(el.classList.contains('negate')){
-      $$('.rm-stamp',el).forEach(function(s,i){
-        setTimeout(function(){ s.classList.add('hit'); }, RM?0:(700+i*550));
-      });
-    }
     if(el.classList.contains('jrows')){
       var ns=$('[data-nowstamp]',el);
       if(ns) setTimeout(function(){ ns.classList.add('hit'); }, RM?0:1400);
@@ -1442,11 +1332,6 @@ var gsecs=$$('[data-gnum]').map(function(sec){
   return {sec:sec,num:$('.gnum',sec)};
 });
 var mlines=$$('.mline');
-var flowStage=$('#flowStage');
-var flowEls=$$('#flowSvg [data-fl]').map(function(el){
-  var p=el.getAttribute('data-fl').split(',');
-  return {el:el,s:parseFloat(p[0]),e:parseFloat(p[1]),isText:el.classList.contains('flb')};
-});
 var lastY=window.scrollY, vel=0;
 
 function frame(){
@@ -1472,17 +1357,6 @@ function frame(){
       var p=clamp((vh*0.88-r.top)/(vh*0.45),0,1);
       l.style.setProperty('--fill',p.toFixed(4));
     });
-    /* flow diagram scrub (reversible) */
-    if(flowStage){
-      var fr=flowStage.getBoundingClientRect();
-      var total=fr.height-vh;
-      var fp=total>0?clamp(-fr.top/total,0,1):1;
-      flowEls.forEach(function(f){
-        var t=clamp((fp-f.s)/(f.e-f.s),0,1);
-        if(f.isText){ f.el.style.opacity=t.toFixed(3); }
-        else{ f.el.style.strokeDashoffset=(1-t).toFixed(4); }
-      });
-    }
     /* marquees: speed ~3x with velocity, direction flips on scroll-up */
     var speed=1+clamp(Math.abs(vel)/8,0,2);
     var dir=vel<-0.4?-1:1;
@@ -1494,9 +1368,6 @@ if(RM){
   /* static end states */
   gsecs.forEach(function(g){ g.num.style.setProperty('--p',1); });
   mlines.forEach(function(l){ l.style.setProperty('--fill',1); });
-  flowEls.forEach(function(f){
-    if(f.isText) f.el.style.opacity=1; else f.el.style.strokeDashoffset=0;
-  });
   $$('.stamp[data-stamp]:not(.copied-stamp)').forEach(function(s){ s.classList.add('hit'); });
   /* keep the progress rule only */
   (function rmFrame(){
